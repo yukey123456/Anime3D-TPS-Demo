@@ -176,6 +176,22 @@ MonoBehaviour:
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
+  - name: CoverCrouchingLeft
+    weaponHandOffset:
+      position: {x: -0.0027945414, y: -0.010633774, z: 0.075728126}
+      eulerAngles: {x: 10.275414, y: 8.729838, z: 0.49679583}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: 0.016003827, y: 0.023236763, z: -0.001968788}
+      eulerAngles: {x: 11.818736, y: 177.75221, z: 355.53036}
+    supportHintOffset:
+      position: {x: 4.158663e-30, y: -2.4012903e-30, z: -1.934012e-30}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
   standingRight:
     name: Standing
     weaponHandOffset:
