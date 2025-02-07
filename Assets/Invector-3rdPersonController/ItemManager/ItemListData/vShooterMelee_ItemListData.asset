@@ -820,7 +820,7 @@ MonoBehaviour:
   createNewItem: 0
   maxStack: 1
   amount: 0
-  originalObject: {fileID: 170828, guid: 25e6ec771844a8145ad0f248fb87dc48, type: 3}
+  originalObject: {fileID: 170828, guid: a0ef3c70b27799d409935f45a6537bb0, type: 3}
   dropObject: {fileID: 199660, guid: 38ebe90b46d37bd47822899bd47a318a, type: 3}
   attributes:
   - name: 2

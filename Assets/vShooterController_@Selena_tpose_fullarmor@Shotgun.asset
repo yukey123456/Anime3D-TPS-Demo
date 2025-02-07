@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: vShooterController_@Selena_tpose_fullarmor@Shotgun
   m_EditorClassIdentifier: 
   weaponCategories:
-  - HandGun
-  - Pistol
+  - Shotgun
   ikAdjustsLeft:
   - name: Standing
     weaponHandOffset:
