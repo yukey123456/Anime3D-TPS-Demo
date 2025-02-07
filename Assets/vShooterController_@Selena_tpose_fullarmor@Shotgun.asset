@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d054d6e948083b0469b2ff301c0adbab, type: 3}
-  m_Name: vShooterController_Selena_nude@Pistol
+  m_Name: vShooterController_@Selena_tpose_fullarmor@Shotgun
   m_EditorClassIdentifier: 
   weaponCategories:
+  - HandGun
   - Pistol
   ikAdjustsLeft:
   - name: Standing
@@ -82,33 +83,33 @@ MonoBehaviour:
   ikAdjustsRight:
   - name: Standing
     weaponHandOffset:
-      position: {x: -0.012780441, y: 0.048772354, z: 0.023123637}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0.0065962696, y: 0.0049928627, z: 0.008153485}
-      eulerAngles: {x: 25.366112, y: 177.68558, z: 359.50708}
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     supportHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
   - name: StandingAiming
     weaponHandOffset:
-      position: {x: 0.025383446, y: 0.00398493, z: -0.0044538113}
-      eulerAngles: {x: -1.61e-43, y: -1.61e-43, z: 1.61e-43}
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0.02435865, y: 0.025000235, z: -0.021720089}
-      eulerAngles: {x: 0.14265072, y: 169.10268, z: 359.54248}
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     supportHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
@@ -130,49 +131,17 @@ MonoBehaviour:
       head: {x: 0, y: 0}
   - name: CrouchingAiming
     weaponHandOffset:
-      position: {x: 1e-45, y: 1e-45, z: -1e-45}
-      eulerAngles: {x: -1.61e-43, y: -1.61e-43, z: 1.61e-43}
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0.009580044, y: 0.020850947, z: -0.01709932}
-      eulerAngles: {x: -0.004572053, y: 177.78273, z: 359.66022}
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     supportHintOffset:
       position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
-    spineOffset:
-      spine: {x: 0, y: 0}
-      head: {x: 0, y: 0}
-  - name: CoverCrouchingCornerAimingRight
-    weaponHandOffset:
-      position: {x: 1e-45, y: 1e-45, z: -1e-45}
-      eulerAngles: {x: -0, y: 0, z: 0}
-    weaponHintOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
-    supportHandOffset:
-      position: {x: 0.039680835, y: 0.01661424, z: -0.025073025}
-      eulerAngles: {x: 355.42108, y: 171.22614, z: 338.10815}
-    supportHintOffset:
-      position: {x: -0.17135954, y: -0.07615114, z: 0.074298725}
-      eulerAngles: {x: -0, y: 0, z: 0}
-    spineOffset:
-      spine: {x: 0, y: 0}
-      head: {x: 0, y: 0}
-  - name: CoverCrouchingBarrierAimingLeft
-    weaponHandOffset:
-      position: {x: 0.03995694, y: 0.11674638, z: -0.07192342}
-      eulerAngles: {x: 0.026443137, y: 329.2077, z: 0.04030257}
-    weaponHintOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
-    supportHandOffset:
-      position: {x: 0.022407409, y: 0.019517059, z: -0.025596075}
-      eulerAngles: {x: 359.90613, y: 161.08424, z: 0.036398195}
-    supportHintOffset:
-      position: {x: 0.027630223, y: -0.015954219, z: -0.01284961}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      eulerAngles: {x: 0, y: 0, z: 0}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}

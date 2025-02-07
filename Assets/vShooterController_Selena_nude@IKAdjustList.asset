@@ -19,3 +19,4 @@ MonoBehaviour:
   weaponIKAdjusts:
   - {fileID: 11400000, guid: f3cadafb8729c80488a8866ea737b610, type: 2}
   - {fileID: 11400000, guid: 949ebdda3b92e8a4ea191cb65e914f69, type: 2}
+  - {fileID: 11400000, guid: 9ab620017a347c843a61dfb26ee8e843, type: 2}
