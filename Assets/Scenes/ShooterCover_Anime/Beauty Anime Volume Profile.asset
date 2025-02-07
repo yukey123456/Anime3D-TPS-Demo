@@ -77,7 +77,7 @@ MonoBehaviour:
     m_Value: 0
   sharpenIntensity:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 4
   sharpenDepthThreshold:
     m_OverrideState: 0
     m_Value: 0.035
@@ -114,7 +114,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
   tonemap:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   tonemapAGXGamma:
     m_OverrideState: 0
@@ -132,11 +132,11 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   brightness:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.95
   contrast:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 1.171
   daltonize:
     m_OverrideState: 0
     m_Value: 0
@@ -164,10 +164,10 @@ MonoBehaviour:
     dimension: 1
   bloomIntensity:
     m_OverrideState: 1
-    m_Value: 0.8
+    m_Value: 0.25
   bloomThreshold:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.75
   bloomConservativeThreshold:
     m_OverrideState: 0
     m_Value: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
     m_Value: 0.01
   lensDirtIntensity:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 3.48
   lensDirtThreshold:
     m_OverrideState: 0
     m_Value: 0.5
@@ -455,11 +455,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   depthOfFieldAutofocusMinDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   depthOfFieldAutofocusMaxDistance:
-    m_OverrideState: 0
-    m_Value: 10000
+    m_OverrideState: 1
+    m_Value: 1000
   depthOfFieldTargetFallback:
     m_OverrideState: 0
     m_Value: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
     m_Value: 0
   depthOfFieldFocalLength:
     m_OverrideState: 1
-    m_Value: 0.01
+    m_Value: 0.02
   depthOfFieldAperture:
     m_OverrideState: 0
     m_Value: 2.8
@@ -604,10 +604,10 @@ MonoBehaviour:
     m_Value: 0.15
   vignettingOuterRing:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0.325
   vignettingInnerRing:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.925
   vignettingFade:
     m_OverrideState: 1
     m_Value: 0
@@ -711,8 +711,8 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 9
   ditherIntensity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 0.005
   frame:
     m_OverrideState: 0
     m_Value: 0
