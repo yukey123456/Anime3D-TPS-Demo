@@ -82,33 +82,33 @@ MonoBehaviour:
   ikAdjustsRight:
   - name: Standing
     weaponHandOffset:
-      position: {x: -0.04029843, y: -0.03003126, z: 0.05032234}
-      eulerAngles: {x: 359.32663, y: 359.1523, z: 6.986429}
+      position: {x: -0.029652188, y: -0.023263412, z: 0.054338627}
+      eulerAngles: {x: 4.7704206, y: 359.8438, z: 7.008209}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
       eulerAngles: {x: -0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0.0066949194, y: 0.037074022, z: 0.058008656}
-      eulerAngles: {x: 357.9176, y: 136.98192, z: 0.15117441}
+      position: {x: -0.052589353, y: -0.010453362, z: -0.006448373}
+      eulerAngles: {x: 341.7577, y: 315.16733, z: 278.4171}
     supportHintOffset:
-      position: {x: 0, y: 0, z: 0}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      position: {x: 0.06428581, y: -0.002310179, z: 0.14732407}
+      eulerAngles: {x: 0.022399645, y: 292.58533, z: 0.023149826}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
   - name: StandingAiming
     weaponHandOffset:
-      position: {x: 0.010946734, y: -0.04043086, z: 0.045594737}
-      eulerAngles: {x: -1.61e-43, y: -1.61e-43, z: 1.61e-43}
+      position: {x: 0.031146448, y: -0.03941541, z: -0.0013633966}
+      eulerAngles: {x: 4.82e-43, y: -8.03e-43, z: 8.03e-43}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
       eulerAngles: {x: -0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: -0.02556205, y: 0.027196037, z: 0.054819055}
-      eulerAngles: {x: 17.796, y: 165.12079, z: 26.130133}
+      position: {x: -0.035862636, y: -0.009949459, z: -0.040630583}
+      eulerAngles: {x: 359.40488, y: 281.34805, z: 269.50836}
     supportHintOffset:
-      position: {x: -0.010410969, y: 0.011750556, z: 0.041724402}
-      eulerAngles: {x: -0, y: 0, z: 0}
+      position: {x: 0.064049825, y: -0.016397946, z: 0.1073886}
+      eulerAngles: {x: 6.42e-43, y: -6.42e-43, z: 6.42e-43}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
@@ -146,17 +146,145 @@ MonoBehaviour:
       head: {x: 0, y: 0}
   - name: CoverCrouchingLeft
     weaponHandOffset:
-      position: {x: -0.05069891, y: -0.00023384392, z: 0.05552421}
-      eulerAngles: {x: 0.1807562, y: 10.240309, z: 359.78635}
+      position: {x: -0.0027474628, y: 0.015146203, z: 0.04937396}
+      eulerAngles: {x: 0.18075614, y: 10.240295, z: 359.78635}
     weaponHintOffset:
       position: {x: 0, y: 0, z: 0}
       eulerAngles: {x: -0, y: 0, z: 0}
     supportHandOffset:
-      position: {x: 0.0061818687, y: 0.015325401, z: 0.044550523}
-      eulerAngles: {x: 0.9004692, y: 182.66814, z: 0.39095595}
+      position: {x: -0.058640722, y: 0.00024133455, z: 0.014814939}
+      eulerAngles: {x: 358.50836, y: 349.3905, z: 271.55603}
     supportHintOffset:
-      position: {x: 1e-45, y: -1e-45, z: -1e-45}
+      position: {x: 0, y: 0, z: 3e-45}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingRight
+    weaponHandOffset:
+      position: {x: 0.034693692, y: -0.0037003139, z: 0.012104199}
+      eulerAngles: {x: 20.755213, y: 24.529886, z: 358.62793}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
       eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.05861233, y: -0.004387101, z: 0.010200253}
+      eulerAngles: {x: 358.19382, y: 334.12576, z: 277.31177}
+    supportHintOffset:
+      position: {x: 0, y: 0, z: 3e-45}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverStandingAimingRight
+    weaponHandOffset:
+      position: {x: 0.03503771, y: -0.023945866, z: -0.0050757974}
+      eulerAngles: {x: 1.4447592, y: 346.5731, z: 0.19353554}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.031397734, y: -0.03371275, z: -0.027573433}
+      eulerAngles: {x: 4.040045, y: 299.47165, z: 271.9006}
+    supportHintOffset:
+      position: {x: 0.119278505, y: -0.0009087324, z: 0.23840526}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingCornerAimingLeft
+    weaponHandOffset:
+      position: {x: 0.042544633, y: -0.052551378, z: 0.00056617334}
+      eulerAngles: {x: 2.7247385e-23, y: -2.5849818e-22, z: 6.966963e-24}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.020161878, y: -0.01109913, z: -0.046304636}
+      eulerAngles: {x: 7.9102464, y: 266.52005, z: 270.03436}
+    supportHintOffset:
+      position: {x: 0.04345889, y: -0.00023782252, z: 0.06452451}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingCornerAimingRight
+    weaponHandOffset:
+      position: {x: 0.03423665, y: -0.06264489, z: 0.026944805}
+      eulerAngles: {x: 3.21e-43, y: -3.21e-43, z: 3.21e-43}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.027080545, y: -0.013344787, z: -0.037263278}
+      eulerAngles: {x: 2.2924628, y: 279.38696, z: 277.9295}
+    supportHintOffset:
+      position: {x: 0.044442635, y: -0.00015486033, z: 0.048959687}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingBarrierAimingRight
+    weaponHandOffset:
+      position: {x: 0.014105524, y: -0.10846187, z: 0.012268379}
+      eulerAngles: {x: 353.68, y: 357.53165, z: 359.67603}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.062395778, y: -0.004645412, z: -0.011172503}
+      eulerAngles: {x: 344.2401, y: 301.65396, z: 277.81116}
+    supportHintOffset:
+      position: {x: -0.00067291793, y: 0.00031327503, z: -0.0048687733}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverStandingRight
+    weaponHandOffset:
+      position: {x: -0.00055311585, y: 0.004022541, z: 0.07005189}
+      eulerAngles: {x: -1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.05895447, y: -0.023170905, z: -0.02331893}
+      eulerAngles: {x: 0.54676837, y: 330.77225, z: 270.97192}
+    supportHintOffset:
+      position: {x: 0.040464092, y: 0.0006695874, z: 0.033898823}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverStandingLeft
+    weaponHandOffset:
+      position: {x: -0.00000080652535, y: -0.00032041967, z: 0.03984288}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.051122926, y: -0.021583267, z: -0.046912234}
+      eulerAngles: {x: 356.7091, y: 312.05167, z: 267.0968}
+    supportHintOffset:
+      position: {x: 0.00037032925, y: -0.00014960393, z: -0.056284666}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingBarrierAimingLeft
+    weaponHandOffset:
+      position: {x: -0.04237572, y: -0.14058903, z: -0.0012837499}
+      eulerAngles: {x: -1.468204e-33, y: -5.777222e-34, z: -1.0693822e-34}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.029322457, y: -0.00064606225, z: -0.039470248}
+      eulerAngles: {x: 354.285, y: 271.6414, z: 274.90274}
+    supportHintOffset:
+      position: {x: 8.7646595e-38, y: 2.138084e-37, z: 2.2283966e-36}
+      eulerAngles: {x: 1.61e-43, y: -1.61e-43, z: 1.61e-43}
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
