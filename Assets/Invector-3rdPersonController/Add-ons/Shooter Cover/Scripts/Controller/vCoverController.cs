@@ -10,14 +10,19 @@ namespace Invector.vCover
 
     [vClassHeader("Cover Controller")]
     public class vCoverController : vMonoBehaviour
-    {        
+    {
         #region Variables
 
         #region -------------Settings----------------
 
         [vEditorToolbar("Cover Settings")]
         [vSeparator("Enter/Exit Cover Input")]
-        public GenericInput enterExitInput = new GenericInput("Space", "A", "A");
+        //public bool seperateEnterExitInput;
+        //[vHideInInspector(nameof(seperateEnterExitInput), true)]
+        //public GenericInput enterExitInput = new GenericInput("Space", "A", "A");
+        public GenericInput enterCoverInput = new GenericInput("Space", "A", "A");
+        public GenericInput exitCoverInput = new GenericInput("Space", "A", "A");
+
         [Tooltip("Check this option to automatically enter cover mode when close to a cover point without input and within the EnterInputDirectionAngle limit.")]
         public bool autoEnterCover;
         [vHideInInspector("autoEnterCover")]
@@ -469,15 +474,16 @@ namespace Invector.vCover
 
                 return;
             }
-
-            bool up = false;
-            float inputTimer = 0;
-            bool inTimer = enterExitInput.GetButtonTimer(ref inputTimer, ref up, .2f);
+            //bool inTimer = enterExitInput.GetButtonTimer(ref inputTimer, ref up, .2f);
 
             ///Enter Cover or Go To Cover Point
+            bool upEnterInput = false;
+            float inputEnterTimer = 0;
+            bool inEnterInputTimer = enterCoverInput.GetButtonTimer(ref inputEnterTimer, ref upEnterInput, .2f);
+
             if (!shooterInput.animator.IsInTransition(0) && possibleCoverPoint && !goingToCoverPoint && !shooterInput.cc.customAction && !isRolling && !shooterInput.cc.isJumping && !shooterInput.cc.ragdolled && !shooterInput.cc.isDead)
             {
-                if (((enterExitInput.GetButtonDown() || inAutoEnterTimer) && !inCover) || (inTimer && inCover && wasInCover))
+                if (((enterCoverInput.GetButtonDown() || inAutoEnterTimer) && !inCover) || (inEnterInputTimer && inCover && wasInCover))
                 {
                     timeToExit = Time.time + .5f;
                     currentCoverRoutine = (autoEnterCover && !inCover) || !autoTravelToNextCover ? StartCoroutine(EnterCoverPointRoutine(possibleCoverPoint)) : StartCoroutine(GoToCoverPointRoutine(possibleCoverPoint, wayPath.vCopy()));
@@ -486,12 +492,20 @@ namespace Invector.vCover
             }
 
             ///ExitCover
-            bool exitCoverA = (inCover && wasInCover && up && autoTravelToNextCover && !goingToCornerPoint && inputTimer > 0 && (timeToExit < Time.time));
-            bool exitCoverB = (!inCover && !autoEnterCover && inputTimer == 0 && autoTravelToNextCover && !enterExitInput.GetButton() && goingToCoverPoint);
+            bool upExitInput = false;
+            float inputExitTimer = 0;
+            bool inExitInputTimer = exitCoverInput.GetButtonTimer(ref inputExitTimer, ref upExitInput, .2f);
+
+            /////Exit by Input
+            bool exitCoverA = (inCover && wasInCover && upExitInput && autoTravelToNextCover && !goingToCornerPoint && inputExitTimer > 0 && (timeToExit < Time.time)); 
+            /////Exit by changing moving direction while move to other cover point
+            bool exitCoverB = (!inCover && !autoEnterCover && inputEnterTimer == 0 && autoTravelToNextCover && !enterCoverInput.GetButton() && goingToCoverPoint);
+            /////Exit when in cover but execute some custom action like rolling
             bool exitCoverC = inCover && wasInCover && !goingToCornerPoint && !shooterInput.animator.IsInTransition(0) && (shooterInput.cc.customAction || isRolling || shooterInput.cc.isJumping || shooterInput.cc.ragdolled || shooterInput.cc.isDead);
-            bool exitCoverD = inCover && !autoTravelToNextCover && !goingToCornerPoint && !shooterInput.animator.IsInTransition(0) && inputTimer > 0 && up;
+            /////Exit if is not autoTravelToNextCover and input
+            bool exitCoverD = inCover && !autoTravelToNextCover && !goingToCornerPoint && !shooterInput.animator.IsInTransition(0) && inputExitTimer > 0 && upExitInput;
             bool forceExit = shooterInput.cc.IsAnimatorTag("ExitCover");
-            bool exitCover = exitCoverA || exitCoverB || exitCoverC || exitCoverD || forceExit;
+            bool exitCover = exitCoverA /*|| exitCoverB */|| exitCoverC || exitCoverD || forceExit;
 
             if (exitCover && (inCover || (goingToCoverPoint && (remainingDistanceToNextCover > minDistanceToCancelTravel || forceExit))))
             {
@@ -1483,7 +1497,7 @@ namespace Invector.vCover
                 return;
             }
 
-            holdingCornerInput = enterUsingGetCoverInput ? enterExitInput.GetButton() : false;
+            holdingCornerInput = enterUsingGetCoverInput ? enterCoverInput.GetButton() : false;
             bool inputToCorner = IsLookingToCorner();
             possibleCornerPoint = side == Side.left ? currentCoverPoint.leftCorner : currentCoverPoint.rightCorner;
 
