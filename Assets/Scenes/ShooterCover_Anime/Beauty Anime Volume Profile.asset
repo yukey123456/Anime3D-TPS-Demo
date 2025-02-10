@@ -129,14 +129,14 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   saturate:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0
   brightness:
     m_OverrideState: 1
     m_Value: 0.95
   contrast:
     m_OverrideState: 1
-    m_Value: 1.18
+    m_Value: 1
   daltonize:
     m_OverrideState: 0
     m_Value: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
     m_Value: 1
   bloomThreshold:
     m_OverrideState: 1
-    m_Value: 0.95
+    m_Value: 0.85
   bloomConservativeThreshold:
     m_OverrideState: 0
     m_Value: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
     m_Value: 0.01
   lensDirtIntensity:
     m_OverrideState: 0
-    m_Value: 3.48
+    m_Value: 3.16
   lensDirtThreshold:
     m_OverrideState: 0
     m_Value: 0.5
