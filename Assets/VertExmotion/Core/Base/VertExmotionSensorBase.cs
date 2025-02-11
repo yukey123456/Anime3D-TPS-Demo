@@ -61,7 +61,7 @@ namespace Kalagaan
 
         [HideInInspector] public int m_layerID = 0;
 
-        public bool m_executeOnLateUpdate = true;
+        public UpdateMode UpdateMode = UpdateMode.LateUpdate;
 
         ///current sensor direction
         /// used for smooth
@@ -233,21 +233,30 @@ namespace Kalagaan
 
         private void FixedUpdate()
         {
+            if (UpdateMode != UpdateMode.FixedUpdate)
+                return;
+
             UpdateSensor();
         }
-        //public void Update()
-        //{
-        //    if (!m_executeOnLateUpdate)
-        //        UpdateSensor();
-        //}
 
-        //public void LateUpdate()
-        //{
-        //    if (m_executeOnLateUpdate)
-        //        UpdateSensor();
-        //}
+        public void Update()
+        {
+            if (UpdateMode != UpdateMode.Update)
+                return;
 
-		public void UpdateSensor ()
+            UpdateSensor();
+        }
+
+        public void LateUpdate()
+        {
+            if (UpdateMode != UpdateMode.LateUpdate)
+                return;
+
+            UpdateSensor();
+        }
+
+
+        public void UpdateSensor ()
         {
 
 
