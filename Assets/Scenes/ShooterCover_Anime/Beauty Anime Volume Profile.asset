@@ -136,7 +136,7 @@ MonoBehaviour:
     m_Value: 1
   contrast:
     m_OverrideState: 1
-    m_Value: 0.881
+    m_Value: 1
   daltonize:
     m_OverrideState: 0
     m_Value: 0
