@@ -457,9 +457,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 3
+  selectedToolbar: 0
   weaponCategory: Rifle
-  _shootFrequency: 0.1
+  _shootFrequency: 0.15
   isInfinityAmmo: 0
   _ammo: 300
   ignoreTags:
