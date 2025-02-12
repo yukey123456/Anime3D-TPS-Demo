@@ -148,10 +148,10 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 0}
   colorTempBlend:
     m_OverrideState: 0
-    m_Value: 0.667
+    m_Value: 0.351
   colorTemp:
     m_OverrideState: 0
-    m_Value: 3971
+    m_Value: 7222
   lut:
     m_OverrideState: 0
     m_Value: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_Value: 0.39
   anamorphicFlaresThreshold:
     m_OverrideState: 0
-    m_Value: 0.75
+    m_Value: 0.78
   anamorphicFlaresConservativeThreshold:
     m_OverrideState: 0
     m_Value: 0
@@ -441,7 +441,7 @@ MonoBehaviour:
     m_Value: 0.004
   chromaticAberrationShift:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: -0.386
   chromaticAberrationSmoothing:
     m_OverrideState: 0
     m_Value: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
     m_Value: 0
   depthOfFieldFocalLength:
     m_OverrideState: 1
-    m_Value: 0.02
+    m_Value: 0.025
   depthOfFieldAperture:
     m_OverrideState: 0
     m_Value: 2.8

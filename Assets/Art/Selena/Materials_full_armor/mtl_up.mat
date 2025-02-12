@@ -237,10 +237,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _1st2nd_Shades_Feather: 0.124
-    - _1st_ShadeColor_Feather: 0.116
-    - _1st_ShadeColor_Step: 0.523
+    - _1st_ShadeColor_Feather: 0.05
+    - _1st_ShadeColor_Step: 0.3
     - _2nd_ShadeColor_Feather: 0.124
-    - _2nd_ShadeColor_Step: 0.097
+    - _2nd_ShadeColor_Step: 0.1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ARSampler_AlphaOn: 1
@@ -270,8 +270,8 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.523
-    - _BaseShade_Feather: 0.116
+    - _BaseColor_Step: 0.3
+    - _BaseShade_Feather: 0.05
     - _Base_Speed: 2.66
     - _Blend: 0
     - _BlendMode: 0
@@ -434,7 +434,7 @@ Material:
     - _SecondShadeVisible: 1
     - _SensorId: 1
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.097
+    - _ShadeColor_Step: 0.1
     - _Smoothness: 0.59999996
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -482,7 +482,7 @@ Material:
     - _TweakHighColorOnShadow: 0
     - _TweakMatCapOnShadow: 0
     - _Tweak_HighColorMaskLevel: 0
-    - _Tweak_LightDirection_MaskLevel: 0
+    - _Tweak_LightDirection_MaskLevel: 0.5
     - _Tweak_MatCapUV: 0
     - _Tweak_MatcapMaskLevel: 0
     - _Tweak_RimLightMaskLevel: 0
@@ -513,8 +513,8 @@ Material:
     - _utsVersionY: 11
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 1, g: 0.9, b: 0.90625, a: 1}
-    - _2nd_ShadeColor: {r: 0.9, g: 0.765, b: 0.7746429, a: 1}
+    - _1st_ShadeColor: {r: 0.9019608, g: 0.8117647, b: 0.8117647, a: 1}
+    - _2nd_ShadeColor: {r: 0.8, g: 0.72, b: 0.72, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 0.9150943, g: 0.3496351, b: 0.3496351, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
@@ -528,7 +528,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
-    - _Emissive_Color: {r: 11.984314, g: 11.984314, b: 11.984314, a: 1}
+    - _Emissive_Color: {r: 4.237095, g: 4.237095, b: 4.237095, a: 1}
     - _FirstShadeMaskColor: {r: 0, g: 1, b: 1, a: 1}
     - _HighColor: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightMaskColor: {r: 1, g: 1, b: 0, a: 1}

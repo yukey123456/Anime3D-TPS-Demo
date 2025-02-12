@@ -9,6 +9,12 @@ using UnityEngine.Rendering;
 
 namespace Kalagaan
 {
+    public enum UpdateMode
+    {
+        FixedUpdate,
+        Update,
+        LateUpdate
+    }
 	//[AddComponentMenu("VertExmotion/VertExmotion")]
 	
 	/// VertExmotion is the main class.
@@ -32,7 +38,7 @@ namespace Kalagaan
         [HideInInspector]
 		public string className = "VertExmotion";
 
-        public bool m_executeOnLateUpdate = true;
+        public UpdateMode UpdateMode = UpdateMode.LateUpdate;
         public bool m_dontCheckShaderCompatibility = false;
 #if UNITY_2021_2_OR_NEWER
         public bool m_useVertexBufferMode = true;
@@ -623,20 +629,27 @@ namespace Kalagaan
 
         private void FixedUpdate()
         {
+            if (UpdateMode != UpdateMode.FixedUpdate) 
+                return;
+
             UpdateShaders();
         }
 
-        //public void Update()
-        //{
-        //    if (!m_executeOnLateUpdate)
-        //        UpdateShaders();
-        //}
+        public void Update()
+        {
+            if (UpdateMode != UpdateMode.Update)
+                return;
 
-        //public void LateUpdate()
-        //{
-        //    if (m_executeOnLateUpdate)
-        //        UpdateShaders();
-        //}
+            UpdateShaders();
+        }
+
+        public void LateUpdate()
+        {
+            if (UpdateMode != UpdateMode.LateUpdate)
+                return;
+
+            UpdateShaders();
+        }
 
 
         public void UpdateShaders ()
