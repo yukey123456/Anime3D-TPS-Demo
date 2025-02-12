@@ -460,6 +460,13 @@ namespace Invector.vCover
 
         #region Cover Action
 
+        public void ForceEnterCover(vCoverPoint coverPoint)
+        {
+            timeToExit = Time.time + .5f;
+            currentCoverRoutine = (autoEnterCover && !inCover) || !autoTravelToNextCover ? StartCoroutine(EnterCoverPointRoutine(coverPoint)) : StartCoroutine(GoToCoverPointRoutine(coverPoint, wayPath.vCopy()));
+            possibleCoverPoint = null;
+        }
+
         /// <summary>
         /// Control When Enter our Exit cover
         /// </summary>

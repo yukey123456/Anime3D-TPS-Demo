@@ -28303,7 +28303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 4
+  selectedToolbar: 3
   weaponCategory: Pistol
   _shootFrequency: 0.25
   isInfinityAmmo: 1
@@ -28379,9 +28379,9 @@ MonoBehaviour:
   changeVelocityByCharge: 1
   chargeVelocityMultiplier: 2
   automaticWeapon: 0
-  reloadTime: 0.6
+  reloadTime: 0.5
   reloadOneByOne: 0
-  _clipSize: 8
+  _clipSize: 10
   dontUseReload: 0
   autoReload: 1
   autoReloadStyle: 1
@@ -28412,9 +28412,9 @@ MonoBehaviour:
   handIKTarget: {fileID: 8506921234313281221}
   aimReference: {fileID: 6924678897752322644}
   cameraStability: 0.5
-  recoilRight: 0.5
-  recoilLeft: -0.5
-  recoilUp: 2
+  recoilRight: 0.25
+  recoilLeft: -0.25
+  recoilUp: 1
   reloadSource: {fileID: 0}
   reloadClip: {fileID: 8300000, guid: cc03a3bc3d3003c428240bcd6e12c487, type: 3}
   finishReloadClip: {fileID: 0}
