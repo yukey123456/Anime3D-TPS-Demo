@@ -34,7 +34,7 @@ MonoBehaviour:
   verticalOffset: 0
   distance: 9
   distanceFallOff: 0
-  maxDistance: 10000
+  maxDistance: 1000
   maxDistanceFallOff: 0
   terrainFit: 0
   terrainFitResolution: 128
@@ -129,10 +129,10 @@ MonoBehaviour:
   shadowCancellation: 0
   shadowMaxDistance: 250
   cookie: 0
-  distantFog: 1
+  distantFog: 0
   distantFogStartDistance: 1000
   distantFogDistanceDensity: 0.2
   distantFogMaxHeight: 4000
-  distantFogHeightDensity: 0.1
+  distantFogHeightDensity: 0.02
   distantFogColor: {r: 0.4339623, g: 0.40191898, b: 0.3582236, a: 0.2}
   distantFogDiffusionIntensity: 0.4
