@@ -32,7 +32,7 @@ MonoBehaviour:
   shape: 0
   border: 0.05
   verticalOffset: 0
-  distance: 15
+  distance: 8
   distanceFallOff: 0
   maxDistance: 10000
   maxDistanceFallOff: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   enableHeightGradient: 1
   heightGradient:
     serializedVersion: 2
-    key0: {r: 0.745283, g: 0.37383324, b: 0.16522783, a: 1}
+    key0: {r: 0.5754717, g: 0.22098783, b: 0.1004361, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -108,8 +108,8 @@ MonoBehaviour:
     m_ColorSpace: 1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  brightness: 1
-  deepObscurance: 1.4
+  brightness: 0.8
+  deepObscurance: 2
   specularColor: {r: 1, g: 1, b: 0.8, a: 1}
   specularThreshold: 0.637
   specularIntensity: 0.428
@@ -121,7 +121,7 @@ MonoBehaviour:
   sunDirection: {x: 0, y: 1, z: 0}
   sunColor: {r: 0, g: 0.9568, b: 0.8392, a: 1}
   sunIntensity: 1
-  ambientLightMultiplier: 0.2
+  ambientLightMultiplier: 0.1
   lightDiffusionPower: 32
   lightDiffusionIntensity: 0.4
   receiveShadows: 0
@@ -134,5 +134,5 @@ MonoBehaviour:
   distantFogDistanceDensity: 0.2
   distantFogMaxHeight: 4000
   distantFogHeightDensity: 0.1
-  distantFogColor: {r: 0.49056602, g: 0.44788995, b: 0.38643643, a: 0.2}
+  distantFogColor: {r: 0.4339623, g: 0.40191898, b: 0.3582236, a: 0.2}
   distantFogDiffusionIntensity: 0.4
