@@ -2212,7 +2212,7 @@ namespace Invector.vCover
                 isInRightCorner = false;
                 isInLeftCorner = false;
             }
-            if ((isInRightCorner || isInLeftCorner) && shooterInput.isAimingByInput)
+            if (/*(isInRightCorner || isInLeftCorner) &&*/ shooterInput.isAimingByInput)
             {
                 cornerWeight = 1;
             }
@@ -2220,8 +2220,8 @@ namespace Invector.vCover
             {
                 cornerWeight = 0;
             }
-
             currentCornerWeight = Mathf.Lerp(currentCornerWeight, cornerWeight, cornerWeightSmooth * Time.deltaTime);
+            //Debug.LogError($"{currentCornerWeight} - {wasAiming} - {shooterInput.isAimingByInput}");
             if ((currentCornerWeight >= .9f || (shooterInput.isAimingByInput && !isInRightCornerPositionRange && !isInLeftCornerPositionRange)) && !wasAiming)
             {
                 wasAiming = true;
