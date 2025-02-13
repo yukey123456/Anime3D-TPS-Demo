@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 164997965649439461}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5795298, y: -0.8142927, z: 0.011456043, w: 0.030682893}
-  m_LocalPosition: {x: 0.832523, y: 0.6012707, z: 6.0636597}
+  m_LocalPosition: {x: 0.832523, y: 0.6012707, z: 6.0624175}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83,15 +83,15 @@ MonoBehaviour:
     power: 2
     inflate: 0
     scale: {x: 1, y: 1, z: 1}
-    damping: 7
-    bouncing: 4
+    damping: 5
+    bouncing: 8
     globalSmooth: 0
   m_pidTime: 2
   m_pid:
     m_target: {x: 0, y: 0, z: 0}
     m_params:
-      kp: 7
-      ki: 4
+      kp: 5
+      ki: 8
       kd: 0
       limits: {x: -3.4028235e+38, y: 3.4028235e+38}
     m_pidX:
@@ -1452,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 7019082015234963688}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4691299, y: 0.62715274, z: 0.5400741, w: -0.3080855}
-  m_LocalPosition: {x: -0.87575155, y: 0.64896584, z: 6.073347}
+  m_LocalPosition: {x: -0.87575155, y: 0.64896584, z: 6.071819}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1509,15 +1509,15 @@ MonoBehaviour:
     power: 2
     inflate: 0
     scale: {x: 1, y: 1, z: 1}
-    damping: 7
-    bouncing: 4
+    damping: 5
+    bouncing: 8
     globalSmooth: 0
   m_pidTime: 2
   m_pid:
     m_target: {x: 0, y: 0, z: 0}
     m_params:
-      kp: 7
-      ki: 4
+      kp: 5
+      ki: 8
       kd: 0
       limits: {x: -3.4028235e+38, y: 3.4028235e+38}
     m_pidX:
@@ -1976,7 +1976,7 @@ Transform:
   m_GameObject: {fileID: 8468190449542718648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9536958, z: 7.951736}
+  m_LocalPosition: {x: 0, y: 0.9536958, z: 7.9384103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2007,8 +2007,8 @@ MonoBehaviour:
   m_params:
     translation:
       amplitudeMultiplier: 1
-      outerMaxDistance: 0.35
-      innerMaxDistance: 0.2
+      outerMaxDistance: 0.15
+      innerMaxDistance: 0.15
       axisLimits: 0
       axisOuterMaxDistance: {x: 1, y: 1, z: 1}
       axisInnerMaxDistance: {x: 1, y: 1, z: 1}
@@ -2032,21 +2032,21 @@ MonoBehaviour:
     power: 0.8
     inflate: 0
     scale: {x: 1, y: 1, z: 1}
-    damping: 6
-    bouncing: 5
+    damping: 4
+    bouncing: 4
     globalSmooth: 0
   m_pidTime: 2
   m_pid:
     m_target: {x: 0.012975577, y: -0.004858158, z: 0.016223526}
     m_params:
-      kp: 6
-      ki: 5
+      kp: 4
+      ki: 4
       kd: 0
       limits: {x: -0.021334715, y: 0.021334715}
     m_pidX:
       lastTime: 381.55884
       m_target: 0.012975577
-      m_timeScale: 0
+      m_timeScale: 1
       m_unscaledTime: 0
       m_params:
         kp: 7
@@ -2057,7 +2057,7 @@ MonoBehaviour:
     m_pidY:
       lastTime: 381.55884
       m_target: -0.004858158
-      m_timeScale: 0
+      m_timeScale: 1
       m_unscaledTime: 0
       m_params:
         kp: 7
@@ -2068,7 +2068,7 @@ MonoBehaviour:
     m_pidZ:
       lastTime: 381.55884
       m_target: 0.016223526
-      m_timeScale: 0
+      m_timeScale: 1
       m_unscaledTime: 0
       m_params:
         kp: 7
@@ -2191,21 +2191,21 @@ MonoBehaviour:
   - {fileID: 7219047142849920722}
   m_UpdateRate: 60
   m_UpdateMode: 1
-  m_Damping: 0.12
+  m_Damping: 0.2
   m_DampingDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Elasticity: 0.15
+  m_Elasticity: 0.2
   m_ElasticityDistrib:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.6
+  m_Stiffness: 0.7
   m_StiffnessDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -2494,7 +2494,7 @@ MonoBehaviour:
   m_params:
     usePaintDataFromMeshColors: 0
   m_editorParams:
-    lastSensorSelected: 2
+    lastSensorSelected: 4
     m_showMaterialIDWireFrame: 0
     m_hideUnselectedMaterialID: 0
     m_gradientFactor: 0.6
