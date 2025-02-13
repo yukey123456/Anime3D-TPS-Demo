@@ -5115,6 +5115,7 @@ GameObject:
   - component: {fileID: 3765432771134540724}
   - component: {fileID: 5583571549013318554}
   - component: {fileID: 2025070178443353541}
+  - component: {fileID: 2013525279501178333}
   m_Layer: 15
   m_Name: Spine1
   m_TagString: Untagged
@@ -5268,6 +5269,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2013525279501178333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103346651225199056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &1117637308604820376
 GameObject:
   m_ObjectHideFlags: 0
@@ -5441,6 +5455,7 @@ GameObject:
   - component: {fileID: 1290602606873007566}
   - component: {fileID: 1113851603022716253}
   - component: {fileID: 8267268400803799795}
+  - component: {fileID: 4924625311327027569}
   m_Layer: 15
   m_Name: RightLeg
   m_TagString: Untagged
@@ -5596,6 +5611,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4924625311327027569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250462061745588832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &1388075008018325626
 GameObject:
   m_ObjectHideFlags: 0
@@ -15770,6 +15798,7 @@ GameObject:
   - component: {fileID: 1711249662677286542}
   - component: {fileID: 5063573111520890088}
   - component: {fileID: 6132939733622593170}
+  - component: {fileID: 8102551016054608834}
   m_Layer: 15
   m_Name: LeftArm
   m_TagString: Untagged
@@ -15925,6 +15954,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8102551016054608834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789493226604581958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &2798688255709627209
 GameObject:
   m_ObjectHideFlags: 0
@@ -16066,6 +16108,7 @@ GameObject:
   - component: {fileID: 632775318045268444}
   - component: {fileID: 5588293178681764975}
   - component: {fileID: 8079049609453182198}
+  - component: {fileID: 2168669009144251549}
   m_Layer: 15
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -16221,6 +16264,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2168669009144251549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996331479402014448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &3029099147942424505
 GameObject:
   m_ObjectHideFlags: 0
@@ -24157,6 +24213,7 @@ GameObject:
   - component: {fileID: 8224971437960231958}
   - component: {fileID: 7881065597441322958}
   - component: {fileID: 7945576940780529459}
+  - component: {fileID: 7560361976686860620}
   m_Layer: 15
   m_Name: RightForeArm
   m_TagString: Untagged
@@ -24312,6 +24369,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7560361976686860620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160017357239443715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &3236400361757703087
 GameObject:
   m_ObjectHideFlags: 0
@@ -24524,6 +24594,7 @@ GameObject:
   - component: {fileID: 2448838845857744766}
   - component: {fileID: 7322429655604929167}
   - component: {fileID: 1336529763206256421}
+  - component: {fileID: 6612809820788365038}
   m_Layer: 15
   m_Name: RightUpLeg
   m_TagString: Untagged
@@ -24679,6 +24750,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6612809820788365038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073988912831879663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &4098769316099193916
 GameObject:
   m_ObjectHideFlags: 0
@@ -24806,6 +24890,7 @@ GameObject:
   - component: {fileID: 6915318463853676592}
   - component: {fileID: 5989259592800617724}
   - component: {fileID: 2211757110064449009}
+  - component: {fileID: 2465606742841583350}
   m_Layer: 15
   m_Name: LeftUpLeg
   m_TagString: Untagged
@@ -24961,6 +25046,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2465606742841583350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4305811740487654732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &4353227736208406923
 GameObject:
   m_ObjectHideFlags: 0
@@ -25102,6 +25200,7 @@ GameObject:
   - component: {fileID: 7542555427711524812}
   - component: {fileID: 1352093577176747068}
   - component: {fileID: 6216366388115248048}
+  - component: {fileID: 9193277742696183281}
   m_Layer: 15
   m_Name: LeftForeArm
   m_TagString: Untagged
@@ -25257,6 +25356,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9193277742696183281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5060670672924983881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &5061044023313008777
 GameObject:
   m_ObjectHideFlags: 0
@@ -30626,6 +30738,7 @@ GameObject:
   - component: {fileID: 7600332804960016826}
   - component: {fileID: 6420634540019299866}
   - component: {fileID: 4168557684622037416}
+  - component: {fileID: 3337413700047922039}
   m_Layer: 15
   m_Name: Head
   m_TagString: Untagged
@@ -30780,6 +30893,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3337413700047922039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5694192361589456763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &5764089853057071247
 GameObject:
   m_ObjectHideFlags: 0
@@ -30792,6 +30918,7 @@ GameObject:
   - component: {fileID: 6558238243505222400}
   - component: {fileID: 4369873153608484086}
   - component: {fileID: 5605331859014521770}
+  - component: {fileID: 1004749814058856114}
   m_Layer: 15
   m_Name: Hips
   m_TagString: Untagged
@@ -30901,6 +31028,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1004749814058856114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5764089853057071247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &5817844921728498576
 GameObject:
   m_ObjectHideFlags: 0
@@ -31051,12 +31191,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 0
+  selectedToolbar: 3
   weaponCategory: MyCategory
   _shootFrequency: 0.05
   isInfinityAmmo: 1
   _ammo: 800
-  ignoreTags: []
+  ignoreTags:
+  - Enemy
   hitLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -31339,6 +31480,7 @@ GameObject:
   - component: {fileID: 3198274025399516092}
   - component: {fileID: 3981619970919435192}
   - component: {fileID: 2734148841301486843}
+  - component: {fileID: 1001377077833958673}
   m_Layer: 15
   m_Name: RightArm
   m_TagString: Untagged
@@ -31494,6 +31636,19 @@ MonoBehaviour:
   _onReceiveDamage:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1001377077833958673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979567406239791431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32f2b21b68a3f24988e189da566ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warningWhenOwnerNotFound: 0
 --- !u!1 &7018970248066281338
 GameObject:
   m_ObjectHideFlags: 0
@@ -37126,6 +37281,7 @@ GameObject:
   - component: {fileID: 8467277545462607385}
   - component: {fileID: 6131102299503560529}
   - component: {fileID: 5190328745833348865}
+  - component: {fileID: 4920095652891338616}
   m_Layer: 9
   m_Name: AI - ShooterCover - Ranged
   m_TagString: Enemy
@@ -37654,8 +37810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
-  selectedToolbar: 0
+  openCloseWindow: 1
+  selectedToolbar: 1
   startRagdolled: 0
   debugTimeToStayRagdolled: 0
   groundLayer:
@@ -37851,6 +38007,39 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   onChangeBehaviour:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4920095652891338616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8845059831609648612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29d5c7901a961e418df0988f4fe90b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - {fileID: 5764089853057071247}
+  - {fileID: 4305811740487654732}
+  - {fileID: 2996331479402014448}
+  - {fileID: 4073988912831879663}
+  - {fileID: 1250462061745588832}
+  - {fileID: 1103346651225199056}
+  - {fileID: 2789493226604581958}
+  - {fileID: 5060670672924983881}
+  - {fileID: 5694192361589456763}
+  - {fileID: 6979567406239791431}
+  - {fileID: 3160017357239443715}
+  _onStartReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  _onReceiveDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  _onReceiveAttack:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8876903354068797501
