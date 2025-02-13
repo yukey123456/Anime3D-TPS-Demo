@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &-7936370666720432547
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &-6067380429623673844
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -78,6 +78,54 @@ MonoBehaviour:
   disableDelayTime: 0.5
   customHandler: 
   twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-771788112121409092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: CZ75
+  m_EditorClassIdentifier: 
+  id: 31
+  description: Steal from Girl Frontline 2
+  type: 2
+  icon: {fileID: 21300000, guid: 09867a516d66b7d42bbe651bb2204313, type: 3}
+  stackable: 0
+  createNewItem: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 4212978049633302871, guid: 20539710b275f1147b7e874721a96681,
+    type: 3}
+  dropObject: {fileID: 199660, guid: 38ebe90b46d37bd47822899bd47a318a, type: 3}
+  attributes:
+  - name: 2
+    value: 36
+    isOpen: 0
+    isBool: 0
+  - name: 6
+    value: 8
+    isOpen: 0
+    isBool: 0
+  isInEquipArea: 0
+  isEquiped: 0
+  destroyAfterUse: 0
+  canBeEquipped: 1
+  canBeUsed: 0
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.3
+  disableDelayTime: 0.3
+  customHandler: 
+  twoHandWeapon: 1
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
@@ -124,11 +172,13 @@ MonoBehaviour:
   - {fileID: -6067380429623673844}
   - {fileID: 5440309841161798788}
   - {fileID: 9220526243217188814}
-  inEdition: 1
-  itemsHidden: 0
+  - {fileID: 1922908481176216468}
+  - {fileID: -771788112121409092}
+  inEdition: 0
+  itemsHidden: 1
 --- !u!114 &11427962
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -167,7 +217,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &11429032
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -206,7 +256,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &11449410
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -245,7 +295,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &11450016
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -292,7 +342,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &11457470
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -339,7 +389,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &11463104
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -378,7 +428,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &11475942
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -425,7 +475,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000010611332536
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -464,7 +514,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000010878405866
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -521,7 +571,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000011454979648
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -578,7 +628,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000011522160142
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -635,7 +685,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000012184096246
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -692,7 +742,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000012242135104
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -747,7 +797,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000012982302300
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -802,7 +852,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000013558211890
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -850,7 +900,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000013569560620
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -893,7 +943,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000013967465728
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -950,7 +1000,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000013983157954
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -993,7 +1043,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000014005472098
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1050,7 +1100,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114000014017037032
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1093,7 +1143,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114325489470222926
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1149,7 +1199,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114525615715430938
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1188,7 +1238,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114632281260250690
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1245,7 +1295,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114768070110970990
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1284,7 +1334,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &114823600663062946
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1326,9 +1376,65 @@ MonoBehaviour:
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1922908481176216468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: VEPR-12
+  m_EditorClassIdentifier: 
+  id: 30
+  description: Steal from Girl Frontline 2
+  type: 2
+  icon: {fileID: 21300000, guid: c9bcb3ac64db75147b5fde5864fdfcb2, type: 3}
+  stackable: 0
+  createNewItem: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 4645176992263217464, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+    type: 3}
+  dropObject: {fileID: 120964, guid: d514a70d9dfd1ec459bbec7c9799555a, type: 3}
+  attributes:
+  - name: 2
+    value: 25
+    isOpen: 0
+    isBool: 0
+  - name: 6
+    value: 25
+    isOpen: 0
+    isBool: 0
+  - name: 10
+    value: 85
+    isOpen: 0
+    isBool: 0
+  - name: 9
+    value: 0
+    isOpen: 0
+    isBool: 0
+  isInEquipArea: 0
+  isEquiped: 0
+  destroyAfterUse: 0
+  canBeEquipped: 1
+  canBeUsed: 0
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: HighBack
+  DisableAnim: HighBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 1
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1942869621032062961
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1367,7 +1473,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &5440309841161798788
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1408,7 +1514,7 @@ MonoBehaviour:
       m_Calls: []
 --- !u!114 &9220526243217188814
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
