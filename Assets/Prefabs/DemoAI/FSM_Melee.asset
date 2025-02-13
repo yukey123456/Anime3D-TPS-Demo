@@ -239,7 +239,11 @@ MonoBehaviour:
     isOpen: 0
     scroolView: {x: 0, y: 0, z: 0}
     sameTargetCount: 0
-  - decisions: []
+  - decisions:
+    - trueValue: 0
+      decision: {fileID: 49926770110314863}
+      isValid: 1
+      validated: 0
     trueState: {fileID: 114882150851204216}
     falseState: {fileID: 0}
     muteTrue: 0
@@ -321,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fc604039227434d8b4e63ebc5e74a5, type: 3}
   m_Name: FSM_Melee
   m_EditorClassIdentifier: 
-  selectedNode: {fileID: 114777928246777348}
+  selectedNode: {fileID: 114777723428061538}
   wantConnection: 0
   connectionNode: {fileID: 0}
   showProperties: 1
@@ -363,7 +367,38 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   icon: {fileID: 2800000, guid: edb5dd032a23d534bb6e0d31e06f52c9, type: 3}
+--- !u!114 &49926770110314863
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc0a119c99cbf5479d99e52bf825fb1, type: 3}
+  m_Name: Check Valid Destination
+  m_EditorClassIdentifier: 
+  parentFSM: {fileID: 11400000}
+  editingName: 0
+  trueRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 10
+    height: 10
+  falseRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 10
+    height: 10
+  selectedTrue: 0
+  selectedFalse: 0
+  _areaNames:
+  - Walkable
 --- !u!114 &114047644816513358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -959,14 +994,14 @@ MonoBehaviour:
   m_Name: AnyState
   m_EditorClassIdentifier: 
   description: This State Run after current state
-  selectedDecisionIndex: 0
+  selectedDecisionIndex: 2
   canRemove: 0
   canTranstTo: 0
   canSetAsDefault: 0
   canEditName: 0
   canEditColor: 0
   isOpen: 0
-  isSelected: 0
+  isSelected: 1
   nodeRect:
     serializedVersion: 2
     x: 195
@@ -1079,6 +1114,10 @@ MonoBehaviour:
       decision: {fileID: 114194159120130302}
       isValid: 1
       validated: 0
+    - trueValue: 1
+      decision: {fileID: 49926770110314863}
+      isValid: 1
+      validated: 0
     trueState: {fileID: -1447553757549190890}
     falseState: {fileID: 0}
     muteTrue: 0
@@ -1098,7 +1137,7 @@ MonoBehaviour:
       y: 350
       width: 0
       height: 0
-    selectedTrue: 0
+    selectedTrue: 1
     selectedFalse: 0
     trueSideRight: 1
     falseSideRight: 1
@@ -1124,14 +1163,14 @@ MonoBehaviour:
   m_Name: FindTarget With Delay
   m_EditorClassIdentifier: 
   description: FSM State
-  selectedDecisionIndex: 1
+  selectedDecisionIndex: 0
   canRemove: 1
   canTranstTo: 1
   canSetAsDefault: 1
   canEditName: 1
   canEditColor: 1
   isOpen: 0
-  isSelected: 1
+  isSelected: 0
   nodeRect:
     serializedVersion: 2
     x: 420
@@ -1195,7 +1234,7 @@ MonoBehaviour:
       y: 180
       width: 0
       height: 0
-    selectedTrue: 1
+    selectedTrue: 0
     selectedFalse: 0
     trueSideRight: 0
     falseSideRight: 0
