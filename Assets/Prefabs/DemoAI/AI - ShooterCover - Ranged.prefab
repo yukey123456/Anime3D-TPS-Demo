@@ -25431,6 +25431,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8288209822094961950}
+  - {fileID: 1637075079858299785}
   - {fileID: 876246299756706915}
   m_Father: {fileID: 1595696617771589205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31159,7 +31160,7 @@ GameObject:
   m_Icon: {fileID: 571167235653111936, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &876246299756706915
 Transform:
   m_ObjectHideFlags: 0
@@ -31191,9 +31192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 1
   openCloseWindow: 1
-  selectedToolbar: 3
+  selectedToolbar: 7
   weaponCategory: MyCategory
-  _shootFrequency: 0.05
+  _shootFrequency: 0.02
   isInfinityAmmo: 1
   _ammo: 800
   ignoreTags:
@@ -38074,3 +38075,115 @@ Transform:
   - {fileID: 4514399365124972370}
   m_Father: {fileID: 6547602451740631050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &565890109085010544
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7215186239196575136}
+    m_Modifications:
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.60862976
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.38974625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.56619966
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39634034
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -67.40401
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 81.76501
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 6.1410003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645176992263217464, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      propertyPath: m_Name
+      value: ShooterWeapon_Rifle_VEPR-12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4645176992263217464, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3550201779705499102}
+  m_SourcePrefab: {fileID: 100100000, guid: 90a39993993a2cc4ebd9ad31c9113db6, type: 3}
+--- !u!4 &1637075079858299785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1252701166256679417, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+    type: 3}
+  m_PrefabInstance: {fileID: 565890109085010544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5164654410596477768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4645176992263217464, guid: 90a39993993a2cc4ebd9ad31c9113db6,
+    type: 3}
+  m_PrefabInstance: {fileID: 565890109085010544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3550201779705499102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5164654410596477768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1879bad4c68254283901c8807482f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 0
+  selectedToolbar: 0
+  noiseType: EnemyShot
+  minDistance: 1
+  maxDistance: 60
+  volume: 1
+  duration: 0.5
+  triggerOnStart: 0
+  looping: 0
+  onTriggerNoise:
+    m_PersistentCalls:
+      m_Calls: []
+  onFinishNoise:
+    m_PersistentCalls:
+      m_Calls: []
