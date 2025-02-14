@@ -3,6 +3,7 @@ using Invector.vCharacterController;
 using Invector.vEventSystems;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,10 +12,10 @@ public class OnReceiveAttack : UnityEvent<vDamage, vIMeleeFighter, bool>
 {
 }
 
-public class DamageReceiverContainer : MonoBehaviour, vIAttackReceiver
+public class DamageReceiverContainer : MonoBehaviour, IAttackReceiverContainer, vIAttackReceiver
 {
     [SerializeField]
-    private GameObject[] _attackReceivers;
+    private GameObject[] _targets;
 
     [SerializeField] 
     private OnReceiveDamage _onStartReceiveDamage = new OnReceiveDamage();
@@ -27,7 +28,7 @@ public class DamageReceiverContainer : MonoBehaviour, vIAttackReceiver
 
     private vIHealthController _healthController;
 
-    private List<vDamageReceiver> _damageReceivers= new List<vDamageReceiver>();
+    private List<vDamageReceiver> _damageReceivers = new List<vDamageReceiver>();
 
     public OnReceiveDamage onStartReceiveDamage 
     { 
@@ -49,14 +50,24 @@ public class DamageReceiverContainer : MonoBehaviour, vIAttackReceiver
 
     private void Awake()
     {
-        foreach (var attackReceiver in _attackReceivers)
+        foreach (var attackReceiver in _targets)
         {
             if (attackReceiver.TryGetComponent(out vDamageReceiver damageReceiver))
             {
                 damageReceiver.targetReceiver = gameObject;
                 _damageReceivers.Add(damageReceiver);
             }
+
+            if (attackReceiver.TryGetComponent(out ICompositeAttackReceiver compositeAttackReceiver))
+            {
+                compositeAttackReceiver.Owner = this;
+            }
         }
+    }
+
+    public bool CanReceiveAttack(AttackValidationData data)
+    {
+        return !data.ignoreTags.Contains(gameObject.tag);
     }
 
     public void OnReceiveAttack(vDamage damage, vIMeleeFighter attacker)
@@ -88,7 +99,7 @@ public class DamageReceiverContainer : MonoBehaviour, vIAttackReceiver
     {
         var attackReceivers = new List<GameObject>();
         FindAttackReceiversInChildren(transform, attackReceivers);
-        _attackReceivers = attackReceivers.ToArray();
+        _targets = attackReceivers.ToArray();
     }
 
     private void FindAttackReceiversInChildren(Transform transform, List<GameObject> attackReceivers)
