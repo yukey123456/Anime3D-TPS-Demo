@@ -509,7 +509,7 @@ Material:
     - _MCIALO: 0
     - _MCapIntensity: 1
     - _MVCOL: 0
-    - _MaiColPo: 0.65
+    - _MaiColPo: 0.63
     - _MatCap: 0
     - _MaterialID: 1
     - _MaxFadDistance: 2
@@ -631,7 +631,7 @@ Material:
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowRealtimeShadowIntensity: 1
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0.7
+    - _SelfShadowThreshold: 0.374
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0.097
     - _ShadowColorTexturePower: 0

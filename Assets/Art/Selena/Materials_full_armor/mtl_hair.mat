@@ -511,7 +511,7 @@ Material:
     - _MCIALO: 0
     - _MCapIntensity: 1
     - _MVCOL: 0
-    - _MaiColPo: 0.55
+    - _MaiColPo: 0.52
     - _MatCap: 0
     - _MaterialID: 1
     - _MaxFadDistance: 2
