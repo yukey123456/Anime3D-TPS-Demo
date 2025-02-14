@@ -8647,7 +8647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodySnap: {fileID: 6666382142304760863}
-  boneToSnap: {fileID: 0}
+  boneToSnap: {fileID: 8732002612149260197}
   boneName: RightHand
 --- !u!1 &1345122250902413470
 GameObject:
@@ -22363,12 +22363,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &3194796959576011616
 GameObject:
   m_ObjectHideFlags: 0
@@ -39526,9 +39526,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5411863324261332042}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000014901159, y: -0.000000104308114, z: 0.000000029802319,
-    w: 1}
-  m_LocalPosition: {x: -0.025, y: -0.2126, z: 0.3023}
+  m_LocalRotation: {x: -0.000000049825733, y: -0.00000005215404, z: 0.103894, w: 0.9945884}
+  m_LocalPosition: {x: -0.0253, y: -0.2111, z: 0.2886}
   m_LocalScale: {x: 0.010000001, y: 0.010000008, z: 0.0100000035}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39536,7 +39535,7 @@ Transform:
   - {fileID: 264691619225405129}
   - {fileID: 7670431779968989223}
   m_Father: {fileID: 5324892870445936949}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.927}
 --- !u!1 &5433158002067212163
 GameObject:
   m_ObjectHideFlags: 0
@@ -64161,17 +64160,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 99671610a1d3f124f992855104a1d097,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99671610a1d3f124f992855104a1d097,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99671610a1d3f124f992855104a1d097,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 99671610a1d3f124f992855104a1d097,
         type: 3}
@@ -65333,6 +65332,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 6534812810206952802, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_initialShaders.Array.data[0]
+      value: 
+      objectReference: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
+    - target: {fileID: 6534812810206952802, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_initialShaders.Array.data[1]
+      value: 
+      objectReference: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
     - target: {fileID: 6580748550768379085, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_Layer

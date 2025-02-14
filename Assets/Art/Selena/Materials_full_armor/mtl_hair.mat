@@ -14,12 +14,12 @@ Material:
   m_ValidKeywords:
   - N_F_EAL_ON
   - N_F_HDLS_ON
+  - N_F_NLASOBF_ON
   - N_F_O_ON
   - N_F_RDC_ON
   - N_F_RELGI_ON
   - N_F_RL_ON
   - N_F_SS_ON
-  - N_F_TRANSAFFSHA_ON
   - N_F_TRANS_ON
   m_InvalidKeywords:
   - N_F_TRANSAFFSHA
@@ -53,7 +53,7 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2100
+  m_CustomRenderQueue: 5000
   stringTagMap:
     IgnoreProjection: False
     RenderType: Transparent
@@ -195,7 +195,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTransparency:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0e76e13f6289d7f46af21068ec93235b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCap_Sampler:
@@ -227,7 +227,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineWidthControl:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1c739709e544b1d48a87e71cdc9fdd61, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Outline_Sampler:
@@ -535,7 +535,7 @@ Material:
     - _N_F_MC: 0
     - _N_F_MSSOLTFO: 0
     - _N_F_NFD: 0
-    - _N_F_NLASOBF: 0
+    - _N_F_NLASOBF: 1
     - _N_F_NM: 0
     - _N_F_O: 1
     - _N_F_OFLMB: 0
@@ -567,12 +567,12 @@ Material:
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
     - _Offset_Z: 0
-    - _Opacity: 1
+    - _Opacity: 0.5
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _OutlineWidth: 2
+    - _OutlineWidth: 1.5
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 15
@@ -629,11 +629,11 @@ Material:
     - _SelfLitIntensity: 0
     - _SelfLitPower: 2
     - _SelfShadowAffectedByLightShadowStrength: 0
-    - _SelfShadowHardness: 0.8
+    - _SelfShadowHardness: 0.9
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowRealtimeShadowIntensity: 1
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0.85
+    - _SelfShadowThreshold: 0
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0.097
     - _ShadowColorTexturePower: 0
@@ -687,7 +687,7 @@ Material:
     - _Thickness: 1
     - _ThicknessMultiplier: 1
     - _TrailSize: 1.5
-    - _TransAffSha: 1
+    - _TransAffSha: 0
     - _TransmissionEnable: 1
     - _TransmissionMask: 1
     - _TransparentBackfaceEnable: 0
@@ -770,11 +770,11 @@ Material:
     - _ObjPosi: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectForward: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectRight: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _OutlineColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.6698113, g: 0.37597898, b: 0.37597898, a: 1}
-    - _OverallShadowColor: {r: 0.3584906, g: 0.29254183, b: 0.29254183, a: 1}
+    - _OverallShadowColor: {r: 0.6698113, g: 0.3507031, b: 0.3507031, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
