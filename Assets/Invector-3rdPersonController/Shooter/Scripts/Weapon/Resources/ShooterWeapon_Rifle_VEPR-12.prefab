@@ -17980,11 +17980,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 7
+  selectedToolbar: 1
   weaponCategory: Rifle_noGrip
   _shootFrequency: 0.15
   isInfinityAmmo: 0
-  _ammo: 300
+  _ammo: 10000
   ignoreTags:
   - Player
   hitLayer:
@@ -18035,7 +18035,7 @@ MonoBehaviour:
   automaticWeapon: 1
   reloadTime: 1
   reloadOneByOne: 0
-  _clipSize: 30
+  _clipSize: 3000
   dontUseReload: 0
   autoReload: 1
   autoReloadStyle: 1

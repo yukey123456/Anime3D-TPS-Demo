@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 164997965649439461}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5795298, y: -0.8142927, z: 0.011456043, w: 0.030682893}
-  m_LocalPosition: {x: 0.7571315, y: 0.9399619, z: 7.679588}
+  m_LocalPosition: {x: 0.76278585, y: 0.7829819, z: 7.693431}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: VertExmotionSensor
-  m_parent: {fileID: 2704766101485761460}
+  m_parent: {fileID: 3458460977344099803}
   m_parentSensor: {fileID: 0}
-  m_envelopRadius: 1.5
+  m_envelopRadius: 1.6
   m_center: {x: 0, y: 0, z: 0}
   m_motionDirection: {x: 0, y: 0, z: 0}
   m_motionTorqueForce: 0
@@ -567,7 +567,7 @@ Transform:
   m_GameObject: {fileID: 2667293946185648152}
   serializedVersion: 2
   m_LocalRotation: {x: 0.37476766, y: 0.5960488, z: 0.11259447, w: 0.7011403}
-  m_LocalPosition: {x: 0.7553751, y: -1.2067156, z: 10.179029}
+  m_LocalPosition: {x: 0.7553751, y: -1.2067156, z: 10.175378}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1452,7 +1452,7 @@ Transform:
   m_GameObject: {fileID: 7019082015234963688}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4691299, y: 0.62715274, z: 0.5400741, w: -0.3080855}
-  m_LocalPosition: {x: -0.56876326, y: 0.945158, z: 7.7838726}
+  m_LocalPosition: {x: -0.5840526, y: 0.7842946, z: 7.74686}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1472,9 +1472,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: VertExmotionSensor
-  m_parent: {fileID: 8781796090228950717}
+  m_parent: {fileID: 3458460977344099803}
   m_parentSensor: {fileID: 0}
-  m_envelopRadius: 1.5
+  m_envelopRadius: 1.6
   m_center: {x: 0, y: 0, z: 0}
   m_motionDirection: {x: 0, y: 0, z: 0}
   m_motionTorqueForce: 0
@@ -2014,7 +2014,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Stiffness: 0.6
+  m_Stiffness: 0.5
   m_StiffnessDistrib:
     serializedVersion: 2
     m_Curve: []
@@ -2277,12 +2277,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5347571933719661019}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2704766101485761460 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8052196607835650671, guid: de779282193581d45a2f8d7020fb9438,
-    type: 3}
-  m_PrefabInstance: {fileID: 5347571933719661019}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2792587277484677698 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7851787365265331097, guid: de779282193581d45a2f8d7020fb9438,
@@ -2309,7 +2303,7 @@ MonoBehaviour:
   m_params:
     usePaintDataFromMeshColors: 0
   m_editorParams:
-    lastSensorSelected: 0
+    lastSensorSelected: 2
     m_showMaterialIDWireFrame: 0
     m_hideUnselectedMaterialID: 0
     m_gradientFactor: 0.6
@@ -65678,8 +65672,8 @@ MonoBehaviour:
   - serializedVersion: 2
     rgba: 4294967295
   m_initialShaders:
-  - {fileID: 4800000, guid: be891319084e9d147b09d89e80ce60e0, type: 3}
-  - {fileID: 4800000, guid: be891319084e9d147b09d89e80ce60e0, type: 3}
+  - {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
+  - {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
   m_shareMesh: 0
   m_meshCopy: 0
   m_showEditorPanel: 0
@@ -65899,6 +65893,12 @@ MonoBehaviour:
   m_smr: {fileID: 0}
   m_mf: {fileID: 0}
   m_renderer: {fileID: 4229767565791038956}
+--- !u!4 &3458460977344099803 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1889102022304547840, guid: de779282193581d45a2f8d7020fb9438,
+    type: 3}
+  m_PrefabInstance: {fileID: 5347571933719661019}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4129278557354764972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8320471432030135159, guid: de779282193581d45a2f8d7020fb9438,
@@ -66094,12 +66094,6 @@ Transform:
 --- !u!4 &8464099068844883592 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4665481731665348781, guid: de779282193581d45a2f8d7020fb9438,
-    type: 3}
-  m_PrefabInstance: {fileID: 5347571933719661019}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8781796090228950717 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5482761652540059802, guid: de779282193581d45a2f8d7020fb9438,
     type: 3}
   m_PrefabInstance: {fileID: 5347571933719661019}
   m_PrefabAsset: {fileID: 0}

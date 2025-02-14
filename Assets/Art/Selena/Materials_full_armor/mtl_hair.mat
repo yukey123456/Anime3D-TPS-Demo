@@ -167,7 +167,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 0c0fc866a6de2664ebf4382c69276698, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCapMask:
@@ -567,7 +567,7 @@ Material:
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
     - _Offset_Z: 0
-    - _Opacity: 0.5
+    - _Opacity: 0.8
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0

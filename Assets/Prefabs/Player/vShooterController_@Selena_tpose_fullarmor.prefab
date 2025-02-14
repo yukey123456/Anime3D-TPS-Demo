@@ -33641,7 +33641,7 @@ MonoBehaviour:
       isOpen: 0
       isBool: 0
     - name: 6
-      value: 360
+      value: 10000
       isOpen: 0
       isBool: 0
     - name: 10
@@ -64682,6 +64682,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1068563251295500928, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7571318
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068563251295500928, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.6783834
+      objectReference: {fileID: 0}
     - target: {fileID: 1108851427172467983, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_Layer
@@ -64736,6 +64746,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555832419440207658, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.75537616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555832419440207658, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.178414
       objectReference: {fileID: 0}
     - target: {fileID: 1571796065555530463, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
@@ -65342,6 +65362,11 @@ PrefabInstance:
       propertyPath: m_initialShaders.Array.data[1]
       value: 
       objectReference: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
+    - target: {fileID: 6534812810206952802, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_editorParams.lastSensorSelected
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6580748550768379085, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_Layer
