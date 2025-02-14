@@ -33281,7 +33281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 3
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
@@ -33305,7 +33305,7 @@ MonoBehaviour:
   minAimHitPointDistance: 0
   ignoreBackAimPoint: 1
   backAimPointOffset: 0
-  useCheckAim: 1
+  useCheckAim: 0
   checkAimRadius: 0.1
   checkAimOffsetZ: 0
   checkAimOffsetSmooth: 2
@@ -64725,7 +64725,7 @@ PrefabInstance:
     - target: {fileID: 1374048390984246510, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_collisionZones.Array.data[0].positionOffset.x
-      value: 0.34060615
+      value: 0.34060657
       objectReference: {fileID: 0}
     - target: {fileID: 1374048390984246510, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
@@ -64735,7 +64735,7 @@ PrefabInstance:
     - target: {fileID: 1374048390984246510, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_collisionZones.Array.data[0].positionOffset.z
-      value: -0.40915635
+      value: -0.40915257
       objectReference: {fileID: 0}
     - target: {fileID: 1379475191472146175, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
@@ -65365,7 +65365,7 @@ PrefabInstance:
     - target: {fileID: 6534812810206952802, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_editorParams.lastSensorSelected
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6580748550768379085, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
@@ -65610,17 +65610,17 @@ PrefabInstance:
     - target: {fileID: 8999674816725338193, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_collisionZones.Array.data[0].positionOffset.x
-      value: 0.34060398
+      value: 0.33727214
       objectReference: {fileID: 0}
     - target: {fileID: 8999674816725338193, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_collisionZones.Array.data[0].positionOffset.y
-      value: 0.384999
+      value: 0.3835503
       objectReference: {fileID: 0}
     - target: {fileID: 8999674816725338193, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_collisionZones.Array.data[0].positionOffset.z
-      value: -0.40916002
+      value: -0.40831447
       objectReference: {fileID: 0}
     - target: {fileID: 9040541634143776519, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}

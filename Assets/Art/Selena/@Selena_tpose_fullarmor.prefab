@@ -26,11 +26,10 @@ Transform:
   m_GameObject: {fileID: 164997965649439461}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5795298, y: -0.8142927, z: 0.011456043, w: 0.030682893}
-  m_LocalPosition: {x: 0.76278585, y: 0.7829819, z: 7.693431}
+  m_LocalPosition: {x: 0.76278555, y: 0.7829819, z: 7.6933947}
   m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6863140476464216792}
+  m_Children: []
   m_Father: {fileID: 5653276832775646875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5052727580900449170
@@ -58,8 +57,8 @@ MonoBehaviour:
   m_params:
     translation:
       amplitudeMultiplier: 1
-      outerMaxDistance: 0.13
-      innerMaxDistance: 0.13
+      outerMaxDistance: 0.15
+      innerMaxDistance: 0.15
       axisLimits: 0
       axisOuterMaxDistance: {x: 1, y: 1, z: 1}
       axisInnerMaxDistance: {x: 1, y: 1, z: 1}
@@ -83,15 +82,15 @@ MonoBehaviour:
     power: 1.2
     inflate: 0
     scale: {x: 1, y: 1, z: 1}
-    damping: 10
-    bouncing: 4
+    damping: 8
+    bouncing: 6
     globalSmooth: 0
   m_pidTime: 2
   m_pid:
     m_target: {x: 0, y: 0, z: 0}
     m_params:
-      kp: 10
-      ki: 4
+      kp: 8
+      ki: 6
       kd: 0
       limits: {x: -3.4028235e+38, y: 3.4028235e+38}
     m_pidX:
@@ -192,109 +191,6 @@ MonoBehaviour:
   m_stretch: 0
   m_motionReference: {fileID: 0}
   m_oldScaleFactorFixed: 0
---- !u!1 &381732956663155686
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2629050411873303395}
-  - component: {fileID: 8999674816725338193}
-  m_Layer: 0
-  m_Name: VMCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2629050411873303395
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381732956663155686}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7541888902912836944}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8999674816725338193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381732956663155686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931f37ef88198094e86f1fbfad49449e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  className: VertExmotionCollider
-  m_layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  triggerInteraction: 1
-  m_smooth: 1
-  m_disableBackwardCollisions: 1
-  m_wobble: 0
-  m_damping: 1
-  m_bouncing: 1
-  m_limit: 1
-  m_friction: 0.1
-  m_collisionZones:
-  - positionOffset: {x: 0.3406066, y: 0.3849998, z: -0.40915835}
-    radius: 0.55
-    collisionVector: {x: 0, y: 0, z: 0}
-  m_ignoreColliders: []
-  m_maximizeSphereCollision: 1
-  m_pid:
-    m_target: {x: 0, y: 0, z: 0}
-    m_params:
-      kp: 1
-      ki: 0.5
-      kd: 0
-      limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-    m_pidX:
-      lastTime: 0
-      m_target: 0
-      m_timeScale: 1
-      m_unscaledTime: 0
-      m_params:
-        kp: 1
-        ki: 0.5
-        kd: 0
-        limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-      m_lastInput: 0
-    m_pidY:
-      lastTime: 0
-      m_target: 0
-      m_timeScale: 1
-      m_unscaledTime: 0
-      m_params:
-        kp: 1
-        ki: 0.5
-        kd: 0
-        limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-      m_lastInput: 0
-    m_pidZ:
-      lastTime: 0
-      m_target: 0
-      m_timeScale: 1
-      m_unscaledTime: 0
-      m_params:
-        kp: 1
-        ki: 0.5
-        kd: 0
-        limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-      m_lastInput: 0
-    m_useGlobalParameters: 1
 --- !u!1 &923061857723846834
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +463,7 @@ Transform:
   m_GameObject: {fileID: 2667293946185648152}
   serializedVersion: 2
   m_LocalRotation: {x: 0.37476766, y: 0.5960488, z: 0.11259447, w: 0.7011403}
-  m_LocalPosition: {x: 0.7553751, y: -1.2067156, z: 10.175378}
+  m_LocalPosition: {x: 0.7553751, y: -1.2067156, z: 10.175369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -828,7 +724,7 @@ MonoBehaviour:
   m_limit: 1
   m_friction: 0.1
   m_collisionZones:
-  - positionOffset: {x: -0.19694693, y: 0.45370847, z: -0.2601901}
+  - positionOffset: {x: -0.19838835, y: 0.4533064, z: -0.26008478}
     radius: 0.55
     collisionVector: {x: 0, y: 0, z: 0}
   m_ignoreColliders: []
@@ -1452,11 +1348,10 @@ Transform:
   m_GameObject: {fileID: 7019082015234963688}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4691299, y: 0.62715274, z: 0.5400741, w: -0.3080855}
-  m_LocalPosition: {x: -0.5840526, y: 0.7842946, z: 7.74686}
+  m_LocalPosition: {x: -0.58405185, y: 0.7842946, z: 7.746797}
   m_LocalScale: {x: 0.9999999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2629050411873303395}
+  m_Children: []
   m_Father: {fileID: 5653276832775646875}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &438053628318585254
@@ -1484,8 +1379,8 @@ MonoBehaviour:
   m_params:
     translation:
       amplitudeMultiplier: 1
-      outerMaxDistance: 0.13
-      innerMaxDistance: 0.13
+      outerMaxDistance: 0.15
+      innerMaxDistance: 0.15
       axisLimits: 0
       axisOuterMaxDistance: {x: 1, y: 1, z: 1}
       axisInnerMaxDistance: {x: 1, y: 1, z: 1}
@@ -1509,15 +1404,15 @@ MonoBehaviour:
     power: 1.2
     inflate: 0
     scale: {x: 1, y: 1, z: 1}
-    damping: 10
-    bouncing: 4
+    damping: 8
+    bouncing: 6
     globalSmooth: 0
   m_pidTime: 2
   m_pid:
     m_target: {x: 0, y: 0, z: 0}
     m_params:
-      kp: 10
-      ki: 4
+      kp: 8
+      ki: 6
       kd: 0
       limits: {x: -3.4028235e+38, y: 3.4028235e+38}
     m_pidX:
@@ -1847,109 +1742,6 @@ MonoBehaviour:
   m_ReferenceObject: {fileID: 0}
   m_DistanceToObject: 20
   m_Multithread: 1
---- !u!1 &8286575380080797058
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6863140476464216792}
-  - component: {fileID: 1374048390984246510}
-  m_Layer: 0
-  m_Name: VMCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6863140476464216792
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8286575380080797058}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068563251295500928}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1374048390984246510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8286575380080797058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931f37ef88198094e86f1fbfad49449e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  className: VertExmotionCollider
-  m_layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  triggerInteraction: 1
-  m_smooth: 1
-  m_disableBackwardCollisions: 1
-  m_wobble: 0
-  m_damping: 1
-  m_bouncing: 1
-  m_limit: 1
-  m_friction: 0.1
-  m_collisionZones:
-  - positionOffset: {x: 0.3406066, y: 0.3849998, z: -0.40915835}
-    radius: 0.55
-    collisionVector: {x: 0, y: 0, z: 0}
-  m_ignoreColliders: []
-  m_maximizeSphereCollision: 1
-  m_pid:
-    m_target: {x: 0, y: 0, z: 0}
-    m_params:
-      kp: 1
-      ki: 0.5
-      kd: 0
-      limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-    m_pidX:
-      lastTime: 0
-      m_target: 0
-      m_timeScale: 1
-      m_unscaledTime: 0
-      m_params:
-        kp: 1
-        ki: 0.5
-        kd: 0
-        limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-      m_lastInput: 0
-    m_pidY:
-      lastTime: 0
-      m_target: 0
-      m_timeScale: 1
-      m_unscaledTime: 0
-      m_params:
-        kp: 1
-        ki: 0.5
-        kd: 0
-        limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-      m_lastInput: 0
-    m_pidZ:
-      lastTime: 0
-      m_target: 0
-      m_timeScale: 1
-      m_unscaledTime: 0
-      m_params:
-        kp: 1
-        ki: 0.5
-        kd: 0
-        limits: {x: -3.4028235e+38, y: 3.4028235e+38}
-      m_lastInput: 0
-    m_useGlobalParameters: 1
 --- !u!1 &8800655165885286120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2095,7 @@ MonoBehaviour:
   m_params:
     usePaintDataFromMeshColors: 0
   m_editorParams:
-    lastSensorSelected: 2
+    lastSensorSelected: 3
     m_showMaterialIDWireFrame: 0
     m_hideUnselectedMaterialID: 0
     m_gradientFactor: 0.6

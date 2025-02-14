@@ -17980,7 +17980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 1
+  selectedToolbar: 7
   weaponCategory: Rifle_noGrip
   _shootFrequency: 0.15
   isInfinityAmmo: 0
