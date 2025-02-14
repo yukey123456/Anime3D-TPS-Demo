@@ -511,7 +511,7 @@ Material:
     - _MCIALO: 0
     - _MCapIntensity: 1
     - _MVCOL: 0
-    - _MaiColPo: 0.5
+    - _MaiColPo: 0.55
     - _MatCap: 0
     - _MaterialID: 1
     - _MaxFadDistance: 2
@@ -572,7 +572,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _OutlineWidth: 1.5
+    - _OutlineWidth: 1
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 15
@@ -629,11 +629,11 @@ Material:
     - _SelfLitIntensity: 0
     - _SelfLitPower: 2
     - _SelfShadowAffectedByLightShadowStrength: 0
-    - _SelfShadowHardness: 0.9
-    - _SelfShadowRealTimeShadowColorPower: 1
+    - _SelfShadowHardness: 0.6
+    - _SelfShadowRealTimeShadowColorPower: 2
     - _SelfShadowRealtimeShadowIntensity: 1
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0
+    - _SelfShadowThreshold: 0.837
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0.097
     - _ShadowColorTexturePower: 0
@@ -770,7 +770,7 @@ Material:
     - _ObjPosi: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectForward: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectRight: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+    - _OutlineColor: {r: 0.4528302, g: 0.1003916, b: 0.1003916, a: 1}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.6698113, g: 0.37597898, b: 0.37597898, a: 1}

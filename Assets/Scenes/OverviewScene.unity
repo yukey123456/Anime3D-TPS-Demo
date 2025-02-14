@@ -68196,6 +68196,11 @@ PrefabInstance:
       propertyPath: m_pid.m_pidZ.m_timeScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4273884266568690937, guid: 48c5f93f72076144fa827320cab703d5,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[18]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4281122718082161857, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_UpdateMode

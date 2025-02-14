@@ -130,7 +130,7 @@ MonoBehaviour:
     m_Value: 1
   saturate:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0
   brightness:
     m_OverrideState: 1
     m_Value: 1
@@ -148,10 +148,10 @@ MonoBehaviour:
     m_Value: {r: 1, g: 1, b: 1, a: 0}
   colorTempBlend:
     m_OverrideState: 0
-    m_Value: 0.351
+    m_Value: 0.927
   colorTemp:
     m_OverrideState: 0
-    m_Value: 7222
+    m_Value: 14341
   lut:
     m_OverrideState: 0
     m_Value: 0
@@ -167,13 +167,13 @@ MonoBehaviour:
     m_Value: 1
   bloomThreshold:
     m_OverrideState: 1
-    m_Value: 0.88
+    m_Value: 0.95
   bloomConservativeThreshold:
     m_OverrideState: 0
     m_Value: 1
   bloomSpread:
     m_OverrideState: 0
-    m_Value: 0.235
+    m_Value: 0
   bloomMaxBrightness:
     m_OverrideState: 0
     m_Value: 1000

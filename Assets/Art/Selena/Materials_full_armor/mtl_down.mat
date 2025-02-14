@@ -146,7 +146,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GlossTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4bb0b2379f8b29747bf8879d5d243d17, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
@@ -166,11 +166,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bc8376c6e37b32a499987d9984d94655, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCapMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: ad024f87841505d47b840267e18fa49a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -441,10 +441,10 @@ Material:
     - _GlossIntensity: 1
     - _GlossMapScale: 1
     - _GlossSoftness: 0
-    - _GlossTextureFollowLight: 0
+    - _GlossTextureFollowLight: 1
     - _GlossTextureFollowObjectRotation: 0
     - _GlossTextureRotate: 0
-    - _GlossTextureSoftness: 0
+    - _GlossTextureSoftness: 4
     - _Glossiness: 0.59999996
     - _GlossyReflections: 1
     - _Glow_Edge_Width: 1
@@ -510,7 +510,7 @@ Material:
     - _MCIALO: 0
     - _MCapIntensity: 1
     - _MVCOL: 0
-    - _MaiColPo: 0.5
+    - _MaiColPo: 0.6
     - _MatCap: 0
     - _MaterialID: 1
     - _MaxFadDistance: 2
@@ -571,7 +571,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _OutlineWidth: 0.2
+    - _OutlineWidth: 0.1
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 1.8
@@ -628,11 +628,11 @@ Material:
     - _SelfLitIntensity: 0
     - _SelfLitPower: 2
     - _SelfShadowAffectedByLightShadowStrength: 0
-    - _SelfShadowHardness: 0.8
+    - _SelfShadowHardness: 0.6
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowRealtimeShadowIntensity: 1
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0.85
+    - _SelfShadowThreshold: 0.837
     - _SensorId: 1
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0.097

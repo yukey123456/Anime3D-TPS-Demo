@@ -458,7 +458,7 @@ Material:
     - _HeightTessAmplitude: 2
     - _HeightTessCenter: 0.5
     - _HighColor_Power: 0.4
-    - _HighlightColorPower: 0.9
+    - _HighlightColorPower: 1
     - _HighlightOverridden: 0
     - _HighlightVisible: 1
     - _InvTilingScale: 1
@@ -510,7 +510,7 @@ Material:
     - _MCIALO: 0
     - _MCapIntensity: 1
     - _MVCOL: 0
-    - _MaiColPo: 0.5
+    - _MaiColPo: 0.65
     - _MatCap: 0
     - _MaterialID: 1
     - _MaxFadDistance: 2
@@ -571,7 +571,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _OutlineWidth: 0.2
+    - _OutlineWidth: 0.1
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 1.8
@@ -593,7 +593,7 @@ Material:
     - _RELG: 1
     - _ReceiveShadows: 1
     - _ReceivesSSR: 1
-    - _ReduSha: 0
+    - _ReduSha: 1
     - _RefMetallic: 0
     - _RefVal: 0
     - _ReflectionIntensity: 0
@@ -628,11 +628,11 @@ Material:
     - _SelfLitIntensity: 0
     - _SelfLitPower: 2
     - _SelfShadowAffectedByLightShadowStrength: 0
-    - _SelfShadowHardness: 0.8
+    - _SelfShadowHardness: 0.6
     - _SelfShadowRealTimeShadowColorPower: 1
     - _SelfShadowRealtimeShadowIntensity: 1
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0.85
+    - _SelfShadowThreshold: 0.837
     - _SensorId: 1
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0.2
@@ -774,7 +774,7 @@ Material:
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.5283019, g: 0.3214667, b: 0.3214667, a: 1}
-    - _OverallShadowColor: {r: 0.35, g: 0.35, b: 0.35, a: 1}
+    - _OverallShadowColor: {r: 0.4245283, g: 0.16405551, b: 0.08610716, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
