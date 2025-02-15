@@ -460,6 +460,13 @@ namespace Invector.vCover
 
         #region Cover Action
 
+        public void ForceEnterCover(vCoverPoint coverPoint)
+        {
+            timeToExit = Time.time + .5f;
+            currentCoverRoutine = (autoEnterCover && !inCover) || !autoTravelToNextCover ? StartCoroutine(EnterCoverPointRoutine(coverPoint)) : StartCoroutine(GoToCoverPointRoutine(coverPoint, wayPath.vCopy()));
+            possibleCoverPoint = null;
+        }
+
         /// <summary>
         /// Control When Enter our Exit cover
         /// </summary>
@@ -2212,7 +2219,7 @@ namespace Invector.vCover
                 isInRightCorner = false;
                 isInLeftCorner = false;
             }
-            if ((isInRightCorner || isInLeftCorner) && shooterInput.isAimingByInput)
+            if (/*(isInRightCorner || isInLeftCorner) &&*/ shooterInput.isAimingByInput)
             {
                 cornerWeight = 1;
             }
@@ -2220,8 +2227,8 @@ namespace Invector.vCover
             {
                 cornerWeight = 0;
             }
-
             currentCornerWeight = Mathf.Lerp(currentCornerWeight, cornerWeight, cornerWeightSmooth * Time.deltaTime);
+            //Debug.LogError($"{currentCornerWeight} - {wasAiming} - {shooterInput.isAimingByInput}");
             if ((currentCornerWeight >= .9f || (shooterInput.isAimingByInput && !isInRightCornerPositionRange && !isInLeftCornerPositionRange)) && !wasAiming)
             {
                 wasAiming = true;

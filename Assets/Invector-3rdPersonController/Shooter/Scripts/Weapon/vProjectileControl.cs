@@ -69,7 +69,19 @@ namespace Invector.vShooter
                 }
 
                 var dist = Vector3.Distance(startPosition, transform.position) + castDist;
-                if (!(ignoreTags.Contains(hitInfo.collider.gameObject.tag) || (shooterTransform != null && hitInfo.collider.transform.IsChildOf(shooterTransform))))
+
+                bool canReceiveAttack = !ignoreTags.Contains(hitInfo.collider.gameObject.tag);
+                
+                if (hitInfo.collider.TryGetComponent(out ICompositeAttackReceiver compositeAttackReceiver))
+                {
+                    var attackValidationData = new AttackValidationData()
+                    {
+                        ignoreTags = ignoreTags
+                    };
+                    canReceiveAttack &= compositeAttackReceiver.CanReceiveAttack(attackValidationData);
+                }
+
+                if (canReceiveAttack || (shooterTransform != null && hitInfo.collider.transform.IsChildOf(shooterTransform)))
                 {
                     if (debugHittedObject)
                     {

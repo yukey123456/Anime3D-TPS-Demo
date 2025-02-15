@@ -166,19 +166,19 @@ MonoBehaviour:
     cameraMode: 0
   - Name: CoverCrouch
     forward: -1
-    right: 0.15
-    defaultDistance: 2.2
+    right: 0.25
+    defaultDistance: 1.7
     maxDistance: 3
     minDistance: 0.5
-    height: 1.6
+    height: 1.16
     smooth: 10
     smoothDamp: 10
     xMouseSensitivity: 3
     yMouseSensitivity: 3
     yMinLimit: -40
     yMaxLimit: 80
-    xMinLimit: -360
-    xMaxLimit: 360
+    xMinLimit: -50
+    xMaxLimit: 40
     rotationOffSet: {x: 8, y: 0, z: 0}
     cullingHeight: 1.5
     cullingMinDist: 0.1
@@ -190,22 +190,22 @@ MonoBehaviour:
   - Name: CoverCrouchAiming
     forward: -1
     right: 0.25
-    defaultDistance: 1.6
+    defaultDistance: 1.7
     maxDistance: 3
     minDistance: 0.5
-    height: 1.3
+    height: 1.16
     smooth: 10
     smoothDamp: 1
     xMouseSensitivity: 3
     yMouseSensitivity: 3
     yMinLimit: -40
     yMaxLimit: 80
-    xMinLimit: -360
-    xMaxLimit: 360
+    xMinLimit: -50
+    xMaxLimit: 40
     rotationOffSet: {x: 8, y: 0, z: 0}
     cullingHeight: 1.8
     cullingMinDist: 0.1
-    fov: 65
+    fov: 60
     useZoom: 0
     fixedAngle: {x: 0, y: 0}
     lookPoints: []
@@ -213,10 +213,10 @@ MonoBehaviour:
   - Name: AimingOverBarrier
     forward: -1
     right: 0.3
-    defaultDistance: 1.96
+    defaultDistance: 1.7
     maxDistance: 3
     minDistance: 0.5
-    height: 1.67
+    height: 1.4
     smooth: 10
     smoothDamp: 1
     xMouseSensitivity: 3

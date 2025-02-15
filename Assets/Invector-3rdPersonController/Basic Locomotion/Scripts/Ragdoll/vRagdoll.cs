@@ -478,7 +478,10 @@ namespace Invector.vCharacterController
             {
                 if (animator != null && !animator.isActiveAndEnabled)
                 {
-                    rdStabilize = characterChest.GetComponent<Rigidbody>().velocity.magnitude;
+                    if (characterChest.TryGetComponent(out Rigidbody rb))
+                    {
+                        rdStabilize = rb.velocity.magnitude;
+                    }
 
                 }
                 else
