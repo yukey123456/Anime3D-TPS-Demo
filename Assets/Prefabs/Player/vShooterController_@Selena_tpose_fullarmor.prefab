@@ -22435,12 +22435,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &3194796959576011616
 GameObject:
   m_ObjectHideFlags: 0
@@ -33281,7 +33281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseWindow: 0
   selectedToolbar: 10
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
@@ -33651,7 +33651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseWindow: 0
   selectedToolbar: 0
   inventory: {fileID: 0}
   itemListData: {fileID: 11400000, guid: 1493f9d9326e8014494b8cb04de38f25, type: 2}
@@ -33953,7 +33953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseWindow: 0
   selectedToolbar: 2
   actionTag: Action
   useRootMotion: 1
@@ -34670,12 +34670,12 @@ MonoBehaviour:
   shakeTarget: {fileID: 0}
   shakingPresets:
   - shakeType: 0
-    strength: 0.2
-    roughness: 1
-    fadeIn: 0.2
-    fadeOut: 0.5
-    positionInfluence: {x: 0.2, y: 0.2, z: 0.15}
-    rotationInfluence: {x: 0, y: 0.15, z: 0.15}
+    strength: 1
+    roughness: 30
+    fadeIn: 0.1
+    fadeOut: 0.1
+    positionInfluence: {x: 0, y: 0, z: 0}
+    rotationInfluence: {x: 0, y: 0, z: 0.6}
 --- !u!114 &6232358736074440494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65821,7 +65821,8 @@ MonoBehaviour:
     damageType: 
     force: {x: 0, y: 0, z: 0}
   overrideDamageSender: {fileID: 0}
-  hitBoxes: []
+  hitBoxes:
+  - {fileID: 7690501729732342857}
   damageModifier: 0
   canApplyDamage: 0
   onDamageHit:
@@ -66014,7 +66015,8 @@ MonoBehaviour:
     damageType: 
     force: {x: 0, y: 0, z: 0}
   overrideDamageSender: {fileID: 0}
-  hitBoxes: []
+  hitBoxes:
+  - {fileID: 3164234457729231154}
   damageModifier: 0
   canApplyDamage: 0
   onDamageHit:
@@ -66148,7 +66150,8 @@ MonoBehaviour:
     damageType: 
     force: {x: 0, y: 0, z: 0}
   overrideDamageSender: {fileID: 0}
-  hitBoxes: []
+  hitBoxes:
+  - {fileID: 3418548819840724644}
   damageModifier: 0
   canApplyDamage: 0
   onDamageHit:
@@ -66444,7 +66447,8 @@ MonoBehaviour:
     damageType: 
     force: {x: 0, y: 0, z: 0}
   overrideDamageSender: {fileID: 0}
-  hitBoxes: []
+  hitBoxes:
+  - {fileID: 554606696086054189}
   damageModifier: 0
   canApplyDamage: 0
   onDamageHit:
