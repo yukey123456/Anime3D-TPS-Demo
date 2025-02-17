@@ -479,7 +479,7 @@ MonoBehaviour:
       m_Bits: 4294967295
   depthOfFieldDistance:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 10
   depthOfFieldCameraSettings:
     m_OverrideState: 0
     m_Value: 0

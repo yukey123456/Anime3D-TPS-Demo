@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords:
   - N_F_EAL_ON
   - N_F_HDLS_ON
+  - N_F_MC_ON
   - N_F_NLASOBF_ON
   - N_F_O_ON
   - N_F_RDC_ON
@@ -43,7 +44,6 @@ Material:
   - _SELFSHADOWAFFECTEDBYLIGHTSHADOWSTRENGTH_OFF
   - _SELFSHADOWSHADOWTATVIEWDIRECTION_OFF
   - _SHOWNORMAL_OFF
-  - _SPECMODE_OFF
   - _STIL_OFF
   - _TEXTUREPATTERNSTYLE_OFF
   - _USESECONDARYCUTOUT_OFF
@@ -167,7 +167,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCap:
-        m_Texture: {fileID: 2800000, guid: 0c0fc866a6de2664ebf4382c69276698, type: 3}
+        m_Texture: {fileID: 2800000, guid: f9529760b786dc144aa753bb3c68ad9b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MCapMask:
@@ -532,7 +532,7 @@ Material:
     - _N_F_GLOT: 0
     - _N_F_HDLS: 1
     - _N_F_HPSS: 0
-    - _N_F_MC: 0
+    - _N_F_MC: 1
     - _N_F_MSSOLTFO: 0
     - _N_F_NFD: 0
     - _N_F_NLASOBF: 1
@@ -614,8 +614,8 @@ Material:
     - _Rotate_EmissiveUV: 0
     - _Rotate_MatCapUV: 0
     - _Rotate_NormalMapForMatCapUV: 0
-    - _SPECIN: 1
-    - _SPECMODE: 0
+    - _SPECIN: 0.3
+    - _SPECMODE: 1
     - _SPRDefaultUnlitColorMask: 15
     - _SRPDefaultUnlitColMode: 1
     - _SSRefractionProjectionModel: 0
@@ -774,7 +774,7 @@ Material:
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.6698113, g: 0.37597898, b: 0.37597898, a: 1}
-    - _OverallShadowColor: {r: 0.6886792, g: 0, b: 0, a: 1}
+    - _OverallShadowColor: {r: 0.5377358, g: 0, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
