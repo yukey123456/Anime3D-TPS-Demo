@@ -8,11 +8,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mtl_up
-  m_Shader: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
+  m_Shader: {fileID: 4800000, guid: be891319084e9d147b09d89e80ce60e0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _EMISSIVE_SIMPLE
+  - _IS_ANGELRING_OFF
+  - _IS_CLIPPING_TRANSMODE
+  - _IS_OUTLINE_CLIPPING_YES
+  - _OUTLINE_NML
+  m_InvalidKeywords:
   - N_F_EAL_ON
+  - N_F_ESSAO_ON
   - N_F_GLO_ON
   - N_F_HDLS_ON
   - N_F_NM_ON
@@ -20,17 +27,13 @@ Material:
   - N_F_RDC_ON
   - N_F_RELGI_ON
   - N_F_RL_ON
+  - N_F_SON_ON
   - N_F_SS_ON
-  - N_F_TRANSAFFSHA_ON
-  m_InvalidKeywords:
   - N_F_TRANSAFFSHA
+  - N_F_TRANSAFFSHA_ON
   - _CUSTOMLIGHTDIRECTIONFOLLOWOBJECTROTATION_OFF
-  - _EMISSIVE_SIMPLE
   - _GIFLATSHADE_OFF
   - _GLOSSTEXTUREFOLLOWOBJECTROTATION_OFF
-  - _IS_ANGELRING_OFF
-  - _IS_CLIPPING_TRANSMODE
-  - _IS_OUTLINE_CLIPPING_YES
   - _LIGHTAFFECTOUTLINECOLOR_OFF
   - _LIGHTAFFECTRIMLIGHTCOLOR_OFF
   - _LIGHTAFFECTSHADOW_OFF
@@ -39,8 +42,8 @@ Material:
   - _MCIALO_OFF
   - _MVCOL_OFF
   - _OUTLINEWIDTHAFFECTEDBYVIEWDISTANCE_OFF
-  - _OUTLINE_NML
   - _PSGLOTEX_OFF
+  - _SELFLITHIGHCONTRAST_OFF
   - _SELFSHADOWAFFECTEDBYLIGHTSHADOWSTRENGTH_OFF
   - _SELFSHADOWSHADOWTATVIEWDIRECTION_OFF
   - _SHOWNORMAL_OFF
@@ -54,9 +57,10 @@ Material:
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2450
   stringTagMap:
     IgnoreProjection: False
+    RenderType: TransparentCutout
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -235,7 +239,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 9122ffcd1b3421e4ab0308f7af30abbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -320,11 +324,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _1st2nd_Shades_Feather: 0.2
-    - _1st_ShadeColor_Feather: 0.12
-    - _1st_ShadeColor_Step: 0.45
-    - _2nd_ShadeColor_Feather: 0.2
-    - _2nd_ShadeColor_Step: 0.2
+    - _1st2nd_Shades_Feather: 0.15
+    - _1st_ShadeColor_Feather: 0.22
+    - _1st_ShadeColor_Step: 0.4
+    - _2nd_ShadeColor_Feather: 0.15
+    - _2nd_ShadeColor_Step: 0.45
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ARSampler_AlphaOn: 1
@@ -355,8 +359,8 @@ Material:
     - _AutoRenderQueue: 1
     - _BaseColorOverridden: 0
     - _BaseColorVisible: 1
-    - _BaseColor_Step: 0.45
-    - _BaseShade_Feather: 0.12
+    - _BaseColor_Step: 0.4
+    - _BaseShade_Feather: 0.22
     - _Base_Speed: 2.66
     - _BleModDest: 0
     - _BleModSour: 1
@@ -526,7 +530,7 @@ Material:
     - _N_F_DCS: 0
     - _N_F_DDMD: 0
     - _N_F_EAL: 1
-    - _N_F_ESSAO: 0
+    - _N_F_ESSAO: 1
     - _N_F_FR: 0
     - _N_F_GLO: 1
     - _N_F_GLOT: 0
@@ -548,7 +552,7 @@ Material:
     - _N_F_SCT: 0
     - _N_F_SE: 0
     - _N_F_SL: 0
-    - _N_F_SON: 0
+    - _N_F_SON: 1
     - _N_F_SS: 1
     - _N_F_ST: 0
     - _N_F_STIAL: 0
@@ -572,7 +576,7 @@ Material:
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
     - _OutlineVisible: 1
-    - _OutlineWidth: 0.1
+    - _OutlineWidth: 0.2
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
     - _Outline_Width: 1.8
@@ -625,8 +629,8 @@ Material:
     - _Scroll_EmissiveV: 0
     - _SecondShadeOverridden: 0
     - _SecondShadeVisible: 1
-    - _SelfLitHighContrast: 1
-    - _SelfLitIntensity: 0
+    - _SelfLitHighContrast: 0
+    - _SelfLitIntensity: 0.397
     - _SelfLitPower: 2
     - _SelfShadowAffectedByLightShadowStrength: 0
     - _SelfShadowHardness: 0.2
@@ -636,7 +640,7 @@ Material:
     - _SelfShadowThreshold: 0.9
     - _SensorId: 1
     - _Set_SystemShadowsToBase: 1
-    - _ShadeColor_Step: 0.2
+    - _ShadeColor_Step: 0.45
     - _ShadowColorTexturePower: 0
     - _ShadowHardness: 0
     - _ShadowTColorPower: 1
@@ -710,7 +714,7 @@ Material:
     - _Tweak_MatcapMaskLevel: 0
     - _Tweak_RimLightMaskLevel: 0
     - _Tweak_ShadingGradeMapLevel: 0
-    - _Tweak_SystemShadowsLevel: 0
+    - _Tweak_SystemShadowsLevel: 0.1
     - _Tweak_transparency: 0
     - _UVBase: 0
     - _UVDetail: 0
@@ -741,8 +745,8 @@ Material:
     - _utsVersionY: 11
     - _utsVersionZ: 0
     m_Colors:
-    - _1st_ShadeColor: {r: 0.92, g: 0.92, b: 0.92, a: 1}
-    - _2nd_ShadeColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _1st_ShadeColor: {r: 1, g: 0.78337157, b: 0.7028302, a: 1}
+    - _2nd_ShadeColor: {r: 0.8962264, g: 0.5242591, b: 0.3931559, a: 1}
     - _AngelRingMaskColor: {r: 0, g: 1, b: 0, a: 1}
     - _AngelRing_Color: {r: 0.9150943, g: 0.3496351, b: 0.3496351, a: 1}
     - _Ap_RimLightColor: {r: 1, g: 1, b: 1, a: 1}
@@ -771,16 +775,16 @@ Material:
     - _ObjPosi: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectForward: {r: 0, g: 0, b: 0, a: 0}
     - _ObjectRight: {r: 0, g: 0, b: 0, a: 0}
-    - _OutlineColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _OutlineColor: {r: 0.31132078, g: 0.114925265, b: 0.08664116, a: 1}
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.5283019, g: 0.3214667, b: 0.3214667, a: 1}
-    - _OverallShadowColor: {r: 0.4433962, g: 0.103115395, b: 0, a: 1}
+    - _OverallShadowColor: {r: 0.6981132, g: 0.1540562, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimLightMaskColor: {r: 1, g: 0, b: 1, a: 1}
-    - _SSAOColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SSAOColor: {r: 0.6320754, g: 0.118323445, b: 0.02683338, a: 0}
     - _SecondShadeMaskColor: {r: 0, g: 0, b: 1, a: 1}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
     - _SelfShadowRealTimeShadowColor: {r: 1, g: 1, b: 1, a: 1}
@@ -793,7 +797,7 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
-    - _XYZPosition: {r: 0, g: 0, b: 0, a: 0}
+    - _XYZPosition: {r: -2.2621853, g: 0.13133854, b: -0.20438552, a: 0}
     - emissive: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &6878345150706017695

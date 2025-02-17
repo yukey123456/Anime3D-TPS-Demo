@@ -567,7 +567,7 @@ Material:
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
     - _Offset_Z: 0
-    - _Opacity: 0.8
+    - _Opacity: 0.6
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
     - _OutlineOverridden: 0
@@ -774,7 +774,7 @@ Material:
     - _OutlineMaskColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _Outline_Color: {r: 0.6698113, g: 0.37597898, b: 0.37597898, a: 1}
-    - _OverallShadowColor: {r: 0.6698113, g: 0.3507031, b: 0.3507031, a: 1}
+    - _OverallShadowColor: {r: 0.6886792, g: 0, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _PrevPosition: {r: 0, g: 0, b: 0, a: 0}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
