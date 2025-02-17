@@ -579,7 +579,7 @@ Material:
     - _OutlineWidth: 0.2
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
-    - _Outline_Width: 1.8
+    - _Outline_Width: 1
     - _OverallShadowColorPower: 1
     - _PADist: 0
     - _PASize: 0.5
