@@ -39729,6 +39729,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '@Selena_tpose_fullarmor'
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de779282193581d45a2f8d7020fb9438,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: de779282193581d45a2f8d7020fb9438,
         type: 3}
       propertyPath: m_Controller
@@ -68304,13 +68309,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018973922}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.79668176, y: 0.22362702, z: 0.17094846, w: 0.5348512}
+  m_LocalRotation: {x: 0.7927628, y: -0.23714072, z: -0.14161545, w: 0.5433567}
   m_LocalPosition: {x: -1.83, y: 1.38, z: -1.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1613212107}
-  m_LocalEulerAnglesHint: {x: 129.126, y: -54.166992, z: -58.697998}
+  m_LocalEulerAnglesHint: {x: 127.407, y: 52.545998, z: 60.725}
 --- !u!95 &2018973925
 Animator:
   serializedVersion: 5
@@ -69666,7 +69671,7 @@ PrefabInstance:
     - target: {fileID: 5113570774102881418, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5601595209781145136, guid: 48c5f93f72076144fa827320cab703d5,
         type: 3}
