@@ -48,7 +48,7 @@ namespace Lattice.Samples
 			}
 		}
 
-		private void Update()
+		private void FixedUpdate()
 		{
 			//if (Input.GetMouseButtonDown(0))
 			//{
@@ -80,8 +80,8 @@ namespace Lattice.Samples
 			Vector3 target = lattice.GetHandleBaseWorldPosition(Handle);
 			Vector3 accel = _acceleration * (target - state.Position) - _friction * state.Velocity;
 
-			state.Velocity = state.Velocity + accel          * Time.deltaTime;
-			state.Position = state.Position + state.Velocity * Time.deltaTime;
+			state.Velocity = state.Velocity + accel          * Time.fixedDeltaTime;
+			state.Position = state.Position + state.Velocity * Time.fixedDeltaTime;
 
 			lattice.SetHandleWorldPosition(Handle, state.Position);
 		}
