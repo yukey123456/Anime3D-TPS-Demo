@@ -47,13 +47,24 @@ namespace Invector.vShooter
         protected virtual float scopeCameraTransformWeight { get; set; }
         protected virtual bool scopeActive { get; set; }
         float scopeCameraTargetZoom;
-        float scopeCameraOriginZoom => mainCamera.fieldOfView;
+        float scopeCameraOriginZoom => mainCamera ? mainCamera.fieldOfView : 0f;
         Vector3 scopeCameraTargetDir;
         Vector3 scopeCameraUpDir;
-        Quaternion scopeCameraOriginRot => mainCamera.transform.rotation;
+        Quaternion scopeCameraOriginRot => mainCamera ? mainCamera.transform.rotation  : Quaternion.identity;
         Vector3 scopeCameraTargetPos;
-        Vector3 scopeCameraOriginPos => mainCamera.transform.position;
-        public Camera mainCamera;
+        Vector3 scopeCameraOriginPos => mainCamera ? mainCamera.transform.position : Vector3.zero;
+
+        private vCameraHandler vCameraHandler;
+        public Camera mainCamera
+        {
+            get
+            {
+                if (!vCameraHandler)
+                    vCameraHandler = GetComponentInParent<vCameraHandler>();
+
+                return vCameraHandler? vCameraHandler.Camera : null;
+            }
+        }
 
         public virtual void Init(vThirdPersonController cc)
         {
@@ -63,7 +74,7 @@ namespace Invector.vShooter
             {
                 Debug.LogWarning("Could not find Scope Background Camera. Please assign ScopeBackgroundCamera of Control aim canvas", gameObject);
             }
-            mainCamera = Camera.main;
+
             instance = this;
             this.cc = cc;
             currentAimCanvas = aimCanvasCollection[currentCanvasID];
@@ -149,8 +160,6 @@ namespace Invector.vShooter
                 if (isValid) onCheckvalidAim.Invoke();
                 else onCheckInvalidAim.Invoke();
             }
-
-        
 
             Vector2 ViewportPosition = mainCamera.WorldToViewportPoint(wordPosition);
             Vector2 WorldObject_ScreenPosition = new Vector2(
@@ -244,7 +253,9 @@ namespace Invector.vShooter
             scopeActive = false;
             scopeCameraTransformWeight = 0;
             isScopeCameraActive = false;
-            mainCamera.enabled = true;
+
+            if (mainCamera)
+                mainCamera.enabled = true;
         }
 
         public void DisableAim()

@@ -1151,25 +1151,25 @@ namespace Invector.vCharacterController
         public override void UpdateCameraStates()
         {
             // CAMERA STATE - you can change the CameraState here, the bool means if you want lerp of not, make sure to use the same CameraState String that you named on TPCameraListData
-            if (ignoreTpCamera)
+            if (ignoreTpCamera || !tpCamera)
             {
                 return;
             }
 
-            if (tpCamera == null)
-            {
-                tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
-                if (tpCamera == null)
-                {
-                    return;
-                }
+            //if (tpCamera == null)
+            //{
+            //    tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
+            //    if (tpCamera == null)
+            //    {
+            //        return;
+            //    }
 
-                if (tpCamera)
-                {
-                    tpCamera.SetMainTarget(this.transform);
-                    tpCamera.Init();
-                }
-            }
+            //    if (tpCamera)
+            //    {
+            //        tpCamera.SetMainTarget(this.transform);
+            //        tpCamera.Init();
+            //    }
+            //}
 
             if (changeCameraState)
             {
@@ -1879,7 +1879,7 @@ namespace Invector.vCharacterController
                 return;
             }
 
-            if (CurrentActiveWeapon == null)
+            if (CurrentActiveWeapon == null || !cameraMain)
             {
                 return;
             }

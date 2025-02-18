@@ -50,8 +50,6 @@ namespace Invector.vCharacterController
         public UnityEvent onDisableDisableAnimatorMove = new UnityEvent();
 
         [HideInInspector]
-        public vCamera.vThirdPersonCamera tpCamera;         // access tpCamera info
-        [HideInInspector]
         public bool ignoreTpCamera;                         // controls whether update the cameraStates of not                
         [HideInInspector]
         public string customCameraState;                    // generic string to change the CameraState
@@ -70,33 +68,52 @@ namespace Invector.vCharacterController
         [HideInInspector] public bool lockMoveInput;
         protected InputDevice inputDevice { get { return vInput.instance.inputDevice; } }
 
-        protected Camera _cameraMain;
+        protected vCameraHandler vCameraHandler;
         protected bool withoutMainCamera;
         public virtual bool lockUpdateMoveDirection { get; set; }                // lock the method UpdateMoveDirection
+
+        public vCamera.vThirdPersonCamera tpCamera
+        {
+            get
+            {
+                if (vCameraHandler == null)
+                    vCameraHandler = GetComponent<vCameraHandler>();
+
+                return vCameraHandler? vCameraHandler.TpCamera : null;
+            }
+        }
+
 
         public virtual Camera cameraMain
         {
             get
             {
-                if (!_cameraMain && !withoutMainCamera)
-                {
-                    if (!Camera.main)
-                    {
-                        Debug.Log("Missing a Camera with the tag MainCamera, please add one.");
-                        withoutMainCamera = true;
-                    }
-                    else
-                    {
-                        _cameraMain = Camera.main;
-                        cc.rotateTarget = _cameraMain.transform;
-                    }
-                }
-                return _cameraMain;
+                if (vCameraHandler == null)
+                    vCameraHandler = GetComponent<vCameraHandler>();
+
+                if (vCameraHandler && vCameraHandler.Camera)
+                    cc.rotateTarget = vCameraHandler.Camera.transform;
+
+                return vCameraHandler ? vCameraHandler.Camera : null;
+                //if (!_cameraMain && !withoutMainCamera)
+                //{
+                //    if (!Camera.main)
+                //    {
+                //        Debug.Log("Missing a Camera with the tag MainCamera, please add one.");
+                //        withoutMainCamera = true;
+                //    }
+                //    else
+                //    {
+                //        _cameraMain = Camera.main;
+                //        cc.rotateTarget = _cameraMain.transform;
+                //    }
+                //}
+                //return _cameraMain;
             }
-            set
-            {
-                _cameraMain = value;
-            }
+            //set
+            //{
+            //    _cameraMain = value;
+            //}
         }
 
         public Animator animator
@@ -140,7 +157,8 @@ namespace Invector.vCharacterController
 
         protected virtual IEnumerator CharacterInit()
         {
-            FindCamera();
+            if (tpCamera == null)
+                FindCamera();
             yield return new WaitForEndOfFrame();
             FindHUD();
         }
@@ -156,37 +174,37 @@ namespace Invector.vCharacterController
 
         public virtual void FindCamera()
         {
-            var tpCameras = FindObjectsOfType<vCamera.vThirdPersonCamera>();
+            //var tpCameras = FindObjectsOfType<vCamera.vThirdPersonCamera>();
 
-            if (tpCameras.Length > 1)
-            {
-                tpCamera = System.Array.Find(tpCameras, tp => !tp.isInit);
+            //if (tpCameras.Length > 1)
+            //{
+            //    tpCamera = System.Array.Find(tpCameras, tp => !tp.isInit);
 
-                if (tpCamera == null)
-                {
-                    tpCamera = tpCameras[0];
-                }
+            //    if (tpCamera == null)
+            //    {
+            //        tpCamera = tpCameras[0];
+            //    }
 
-                if (tpCamera != null)
-                {
-                    for (int i = 0; i < tpCameras.Length; i++)
-                    {
-                        if (tpCamera != tpCameras[i])
-                        {
-                            Destroy(tpCameras[i].gameObject);
-                        }
-                    }
-                }
-            }
-            else if (tpCameras.Length == 1)
-            {
-                tpCamera = tpCameras[0];
-            }
+            //    if (tpCamera != null)
+            //    {
+            //        for (int i = 0; i < tpCameras.Length; i++)
+            //        {
+            //            if (tpCamera != tpCameras[i])
+            //            {
+            //                Destroy(tpCameras[i].gameObject);
+            //            }
+            //        }
+            //    }
+            //}
+            //else if (tpCameras.Length == 1)
+            //{
+            //    tpCamera = tpCameras[0];
+            //}
 
-            if (tpCamera && tpCamera.mainTarget != transform)
-            {
-                tpCamera.SetMainTarget(this.transform);
-            }
+            //if (tpCamera && tpCamera.mainTarget != transform)
+            //{
+            //    tpCamera.SetMainTarget(this.transform);
+            //}
         }
 
         #endregion
@@ -581,7 +599,6 @@ namespace Invector.vCharacterController
             }
 
             var zoom = cameraZoomInput.GetAxis();
-
             tpCamera.RotateCamera(X, Y);
             if (!lockCameraInput)
             {
@@ -592,25 +609,25 @@ namespace Invector.vCharacterController
         public virtual void UpdateCameraStates()
         {
             // CAMERA STATE - you can change the CameraState here, the bool means if you want lerp of not, make sure to use the same CameraState String that you named on TPCameraListData
-            if (ignoreTpCamera)
+            if (ignoreTpCamera || !tpCamera)
             {
                 return;
             }
 
-            if (tpCamera == null)
-            {
-                tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
-                if (tpCamera == null)
-                {
-                    return;
-                }
+            //if (tpCamera == null)
+            //{
+            //    tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
+            //    if (tpCamera == null)
+            //    {
+            //        return;
+            //    }
 
-                if (tpCamera)
-                {
-                    tpCamera.SetMainTarget(this.transform);
-                    tpCamera.Init();
-                }
-            }
+            //    if (tpCamera)
+            //    {
+            //        tpCamera.SetMainTarget(this.transform);
+            //        tpCamera.Init();
+            //    }
+            //}
 
             if (changeCameraState)
             {
