@@ -32596,6 +32596,7 @@ GameObject:
   - component: {fileID: 3977422136825736846}
   - component: {fileID: 6232358736074440494}
   - component: {fileID: 5332471017471564395}
+  - component: {fileID: 280773341499896350}
   m_Layer: 8
   m_Name: vShooterController_@Selena_tpose_fullarmor
   m_TagString: Player
@@ -34704,6 +34705,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tpCamera: {fileID: 0}
   _camera: {fileID: 0}
+--- !u!114 &280773341499896350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825063499215843481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 1
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 11400000, guid: a47183d4b578a3e4fbbc7a605070bc8f, type: 2}
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvShooterMeleeInput","Name":"vShooterInput","IsShared":true,"vShooterMeleeInputmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true,"vCameraHandlermValue":1}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects:
+        - {fileID: 4148956670805238294}
+        - {fileID: 5332471017471564395}
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.9
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &4835554365342949588
 GameObject:
   m_ObjectHideFlags: 0

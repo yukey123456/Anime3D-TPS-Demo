@@ -23,4 +23,9 @@ public class vCameraHandler : MonoBehaviour
         _tpCamera = null;
         _camera = null;
     }
+
+    public bool IsCameraValid()
+    {
+        return TpCamera && Camera;
+    }
 }
