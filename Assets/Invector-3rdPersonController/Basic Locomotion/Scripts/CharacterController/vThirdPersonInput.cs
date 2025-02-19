@@ -303,6 +303,7 @@ namespace Invector.vCharacterController
         public virtual void SetLockAllInput(bool value)
         {
             SetLockBasicInput(value);
+
         }
 
         /// <summary>

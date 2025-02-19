@@ -1,5 +1,6 @@
 using Invector.vCamera;
 using Invector.vCharacterController;
+using Invector.vItemManager;
 using System.Collections;
 using UnityEngine;
 
@@ -56,6 +57,11 @@ public class PlayerSwitchingManager : MonoBehaviour
     private void EnableInput(vThirdPersonInput input, bool isOn)
     {
         input.SetLockAllInput(!isOn);
+        
+        if (input.TryGetComponent(out vItemManager itemManager))
+        {
+            itemManager.inventory.SetLockInventoryInput(!isOn);
+        }
 
         if (isOn)
         {
