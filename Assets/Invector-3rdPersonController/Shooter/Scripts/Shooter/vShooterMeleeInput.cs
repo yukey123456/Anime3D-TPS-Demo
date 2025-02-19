@@ -1741,12 +1741,10 @@ namespace Invector.vCharacterController
 
         protected virtual void CheckAimConditions()
         {
-            if (!shooterManager || !IsCameraValid())
+            if (!shooterManager) //Nhan was here
             {
                 return;
             }
-
-            var weaponSide = (tpCamera.switchRight < 0 ? -1 : 1);
 
             if (CurrentActiveWeapon == null)
             {
@@ -1874,7 +1872,6 @@ namespace Invector.vCharacterController
 
         protected virtual void UpdateAimHud()
         {
-
             if (!shooterManager || !controlAimCanvas)
             {
                 return;
@@ -1939,7 +1936,7 @@ namespace Invector.vCharacterController
         #endregion
 
         #region Input Checking
-        public bool IsAimInputState(InputState state)
+        public virtual bool IsAimInputState(InputState state)
         {
             switch (state)
             {
@@ -1953,7 +1950,6 @@ namespace Invector.vCharacterController
             return false;
         }
 
-        public bool SetIsAiming;
         #endregion
 
         protected bool IsCameraValid()

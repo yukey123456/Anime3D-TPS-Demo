@@ -10,10 +10,10 @@ public class PlayerSwitchingManager : MonoBehaviour
     private vThirdPersonCamera _tpCamera;
 
     [SerializeField]
-    private vThirdPersonInput[] _vInputs;
+    private vAllieShooterInput[] _vInputs;
 
     private int _currentIdx;
-    private vThirdPersonInput _currentInput;
+    private vAllieShooterInput _currentInput;
 
     private IEnumerator Start()
     {
@@ -54,9 +54,10 @@ public class PlayerSwitchingManager : MonoBehaviour
         EnableInput(_currentInput, true);
     }
 
-    private void EnableInput(vThirdPersonInput input, bool isOn)
+    private void EnableInput(vAllieShooterInput input, bool isOn)
     {
-        input.SetLockAllInput(!isOn);
+        input.SetLockShooterInput(!isOn);
+        input.TogglePlayerControl(isOn);
         
         if (input.TryGetComponent(out vItemManager itemManager))
         {

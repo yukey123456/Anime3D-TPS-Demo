@@ -22435,12 +22435,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &3194796959576011616
 GameObject:
   m_ObjectHideFlags: 0
@@ -32947,17 +32947,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4825063499215843481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ebb0c68fc51da4b94e466ea07cd110, type: 3}
+  m_Script: {fileID: 11500000, guid: cdc36072f1d3aa04a95e5412841d542b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
-  selectedToolbar: 2
+  openCloseWindow: 1
+  selectedToolbar: 3
   unlockCursorOnStart: 0
   showCursorOnStart: 0
   toggleWalk: 301
   horizontalInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: Horizontal
@@ -32973,7 +32973,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   verticalInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: Vertical
@@ -32989,7 +32989,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   sprintInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: LeftShift
@@ -33005,7 +33005,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   crouchInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: C
@@ -33021,7 +33021,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   strafeInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: Tab
@@ -33269,7 +33269,9 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   shooterManager: {fileID: 0}
-  SetIsAiming: 0
+  _aimTarget: {fileID: 0}
+  _isAllieAiming: 0
+  _maxAllieAimingDistance: 420
 --- !u!114 &3447194792291671971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33283,7 +33285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseWindow: 0
   selectedToolbar: 2
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
@@ -34670,7 +34672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f42e27e74e0ed439234105ee5b5c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeTarget: {fileID: 0}
+  vCameraHandler: {fileID: 5332471017471564395}
   shakingPresets:
   - shakeType: 0
     strength: 1
@@ -34713,7 +34715,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4825063499215843481}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
   m_Name: 
@@ -34734,15 +34736,15 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvShooterMeleeInput","Name":"vShooterInput","IsShared":true,"vShooterMeleeInputmValue":0},{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true,"vCameraHandlermValue":1}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true,"vCameraHandlermValue":0},{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true,"vAllieShooterInputmValue":1}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
         startIndex: 
         dataPosition: 
         unityObjects:
-        - {fileID: 4148956670805238294}
         - {fileID: 5332471017471564395}
+        - {fileID: 4148956670805238294}
         byteData: 
         byteDataArray: 
       Version: 1.7.9
