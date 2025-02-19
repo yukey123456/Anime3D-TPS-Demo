@@ -26,7 +26,7 @@ public class PlayerSwitchingManager : MonoBehaviour
         Switch(0);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.G))
         {

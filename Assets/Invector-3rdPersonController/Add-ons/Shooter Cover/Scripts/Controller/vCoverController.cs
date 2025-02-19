@@ -1405,7 +1405,7 @@ namespace Invector.vCover
         /// <returns></returns>
         protected virtual bool EnterCoverFromLeftSide(vCoverPoint coverPoint)
         {
-            if (coverPoint == null)
+            if (coverPoint == null || !shooterInput.cameraMain)
             {
                 return false;
             }
