@@ -34421,7 +34421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   enterCoverInput:
     useInput: 1
@@ -34477,6 +34477,7 @@ MonoBehaviour:
   changeSideAiming: 1
   angleToChangeSideOnAiming: {x: 45, y: 135}
   cornerAimingAngle: {x: -15, y: 90}
+  changeSideBaseOnCorner: 1
   alwaysStandUpOnExit: 1
   crouchRayRadius: 0.2
   crouchRayDistance: 1
@@ -34488,7 +34489,7 @@ MonoBehaviour:
   angleToEnterCorner: -10
   minAngleToStartMoveToCorner: 10
   timeToEnterCorner: 0.5
-  cornerLeftAiming_OffsetPosition: 0.6
+  cornerLeftAiming_OffsetPosition: 0.4
   cornerRightAiming_OffsetPosition: 0.4
   cornerWeightSmooth: 8
   useHipFireOverBarrier: 1
@@ -47108,7 +47109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2500444070759010104
 RectTransform:
   m_ObjectHideFlags: 0

@@ -303,7 +303,8 @@ namespace Invector.vCharacterController
             {
                 if (!_controlAimCanvas)
                 {
-                    _controlAimCanvas = FindObjectOfType<vControlAimCanvas>();
+                    //_controlAimCanvas = FindObjectOfType<vControlAimCanvas>();
+                    _controlAimCanvas = GetComponentInChildren<vControlAimCanvas>(); //Nhan was here
                     if (_controlAimCanvas)
                     {
                         _controlAimCanvas.Init(cc);

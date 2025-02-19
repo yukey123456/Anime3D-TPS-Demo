@@ -166,7 +166,7 @@ MonoBehaviour:
     cameraMode: 0
   - Name: CoverCrouch
     forward: -1
-    right: 0.25
+    right: 0.2
     defaultDistance: 1.7
     maxDistance: 3
     minDistance: 0.5
@@ -189,11 +189,11 @@ MonoBehaviour:
     cameraMode: 0
   - Name: CoverCrouchAiming
     forward: -1
-    right: 0.25
+    right: 0.2
     defaultDistance: 1.7
     maxDistance: 3
     minDistance: 0.5
-    height: 1.16
+    height: 1.1
     smooth: 10
     smoothDamp: 1
     xMouseSensitivity: 3
