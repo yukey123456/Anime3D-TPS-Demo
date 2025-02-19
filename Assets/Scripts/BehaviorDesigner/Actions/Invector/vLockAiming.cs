@@ -14,7 +14,7 @@ public class vLockAiming : Action
 
 	public override TaskStatus OnUpdate()
 	{
-		vShooterInput.Value.SetAlwaysAim(IsAim);
+		vShooterInput.Value.SetIsAiming = true;
 		return TaskStatus.Success;
 	}
 }

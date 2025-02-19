@@ -75,7 +75,7 @@ namespace Invector.vShooter
                 return false;
             }
 
-            if (shooter.CurrentActiveWeapon == null && ((shooter.aimInput.GetButtonDown() && aim) ||
+            if (shooter.CurrentActiveWeapon == null && ((shooter.IsAimInputState(InputState.ButtonDown) && aim) ||
                 (shooter.shooterManager.hipfireShot && shooter.shotInput.GetButtonDown() && hipFire) || (shooter.shotInput.GetButtonDown() && shoot)))
             {
                 return true;

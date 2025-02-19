@@ -2190,7 +2190,7 @@ namespace Invector.vCover
                 isInRightCornerPositionRange = false;
             }
 
-            if (shooterInput.aimInput.GetButtonDown())
+            if (shooterInput.IsAimInputState(InputState.ButtonDown))
             {
                 if (side == Side.right)
                 {

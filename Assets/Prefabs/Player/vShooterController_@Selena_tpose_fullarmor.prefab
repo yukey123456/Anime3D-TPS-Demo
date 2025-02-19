@@ -33269,6 +33269,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   shooterManager: {fileID: 0}
+  SetIsAiming: 0
 --- !u!114 &3447194792291671971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34493,7 +34494,7 @@ MonoBehaviour:
   cornerLeftAiming_OffsetPosition: 0.4
   cornerRightAiming_OffsetPosition: 0.4
   cornerWeightSmooth: 8
-  useHipFireOverBarrier: 1
+  useHipFireOverBarrier: 0
   hipFireTimer: 0.1
   possibleActions:
   - Action
@@ -34712,7 +34713,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4825063499215843481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
   m_Name: 

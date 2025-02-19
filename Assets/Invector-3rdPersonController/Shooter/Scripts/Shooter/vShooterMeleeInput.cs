@@ -693,11 +693,11 @@ namespace Invector.vCharacterController
 
             if (!cc.isRolling)
             {
-                isAimingByInput = (!isReloading || shooterManager.keepAimingWhenReload) && (aimInput.GetButton() || (shooterManager.alwaysAiming && CurrentActiveWeapon)) && !cc.ragdolled && !cc.customAction
+                isAimingByInput = (!isReloading || shooterManager.keepAimingWhenReload) && (IsAimInputState(InputState.Button) || (shooterManager.alwaysAiming && CurrentActiveWeapon)) && !cc.ragdolled && !cc.customAction
                     || (cc.customAction && cc.isJumping);
             }
 
-            if (aimInput.GetButtonUp() && !shotInput.GetButton())
+            if (IsAimInputState(InputState.ButtonUp) && !shotInput.GetButton())
             {
                 _aimTiming = 0f;
             }
@@ -1938,10 +1938,35 @@ namespace Invector.vCharacterController
 
         #endregion
 
+        #region Input Checking
+        public bool IsAimInputState(InputState state)
+        {
+            switch (state)
+            {
+                case InputState.Button:
+                    return aimInput.GetButton();
+                case InputState.ButtonDown:
+                    return aimInput.GetButtonDown();
+                case InputState.ButtonUp:
+                    return aimInput.GetButtonUp();
+            }
+            return false;
+        }
+
+        public bool SetIsAiming;
+        #endregion
+
         protected bool IsCameraValid()
         {
             return tpCamera && cameraMain;
         }
+    }
+
+    public enum InputState
+    {
+        Button,
+        ButtonDown,
+        ButtonUp,
     }
 
     public static partial class vAnimatorParameters
