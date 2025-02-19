@@ -112,7 +112,17 @@ namespace Invector.vCharacterController
         internal UnityEvent onFinishUpdate = new UnityEvent();
         internal List<vLookTarget> targetsInArea = new List<vLookTarget>();
 
-        public virtual Camera cameraMain { get; set; }
+        private vCameraHandler vCameraHandler;
+        public virtual Camera cameraMain
+        {
+            get
+            {
+                if (!vCameraHandler)
+                    vCameraHandler = GetComponent<vCameraHandler>();
+
+                return vCameraHandler ? vCameraHandler.Camera : null;
+            }
+        }
         public virtual vLookTarget currentLookTarget { get; set; }
         public virtual vLookTarget lastLookTarget { get; set; }
         public virtual Quaternion currentLookRotation { get; set; }
@@ -197,7 +207,6 @@ namespace Invector.vCharacterController
 
             vChar = GetComponent<vICharacter>();
             sensor.headTrack = this;
-            cameraMain = Camera.main;
             var layer = LayerMask.NameToLayer("HeadTrack");
             sensor.transform.parent = transform;
             sensor.gameObject.layer = layer;
@@ -383,9 +392,8 @@ namespace Invector.vCharacterController
             get
             {
                 if (!cameraMain)
-                {
-                    cameraMain = Camera.main;
-                }
+                    return false;
+
                 return head != null && (followCamera && cameraMain != null) || (!followCamera && (currentLookTarget || simpleTarget)) || temporaryLookTime > 0;
             }
         }
@@ -507,7 +515,7 @@ namespace Invector.vCharacterController
             var finalRotation = (rotA * rotB);
             var lookDirection = finalRotation * transform.forward;
             LookDirection = lookDirection;
-            _desiredlookAngle = GetTargetAngle(cameraMain.transform.forward);
+            _desiredlookAngle = cameraMain ? GetTargetAngle(cameraMain.transform.forward) : Vector2.zero;
             _relativeLookAngle = -(GetTargetAngle(lookDirection) - _desiredlookAngle);
 
 

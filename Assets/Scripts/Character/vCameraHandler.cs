@@ -17,4 +17,10 @@ public class vCameraHandler : MonoBehaviour
         _tpCamera = tpCamera;
         _camera = camera;
     }
+
+    public void ClearCamera()
+    {
+        _tpCamera = null;
+        _camera = null;
+    }
 }

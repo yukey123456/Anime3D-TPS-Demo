@@ -1,22 +1,22 @@
-using Invector;
+using Invector.vCamera;
 using Invector.vCharacterController;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerSwitchingManager : MonoBehaviour
 {
     [SerializeField]
-    private vThirdPersonInput[] _vInputs;
+    private vThirdPersonCamera _tpCamera;
 
     [SerializeField]
-    private int _targetIndex;
+    private vThirdPersonInput[] _vInputs;
 
+    private int _currentIdx;
     private vThirdPersonInput _currentInput;
 
     private IEnumerator Start()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
 
         foreach (var input in _vInputs)
         {
@@ -25,10 +25,21 @@ public class PlayerSwitchingManager : MonoBehaviour
         Switch(0);
     }
 
-    [ContextMenu(nameof(SwitchToTargetIndex))]
-    public void SwitchToTargetIndex()
+    private void Update()
     {
-        Switch(_targetIndex);
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            AutoSwitchTarget();
+        }
+    }
+
+    public void AutoSwitchTarget()
+    {
+        int targetIdx = _currentIdx ++;
+        if (_currentIdx >= _vInputs.Length)
+            _currentIdx = 0;
+
+        Switch(targetIdx);
     }
 
     public void Switch(int index)
@@ -45,6 +56,15 @@ public class PlayerSwitchingManager : MonoBehaviour
     private void EnableInput(vThirdPersonInput input, bool isOn)
     {
         input.SetLockAllInput(!isOn);
-        //input.tpCamera.gameObject.SetActive(isOn);
+
+        if (isOn)
+        {
+            _tpCamera.SetMainTarget(input.transform);
+        }
+        else
+        {
+            if (input.TryGetComponent<vCameraHandler>(out var handler)) 
+                handler.ClearCamera();
+        }
     }
 }

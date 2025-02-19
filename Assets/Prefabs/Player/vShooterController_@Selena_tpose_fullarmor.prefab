@@ -22435,12 +22435,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &3194796959576011616
 GameObject:
   m_ObjectHideFlags: 0
@@ -32595,6 +32595,7 @@ GameObject:
   - component: {fileID: 2071423119858471842}
   - component: {fileID: 3977422136825736846}
   - component: {fileID: 6232358736074440494}
+  - component: {fileID: 5332471017471564395}
   m_Layer: 8
   m_Name: vShooterController_@Selena_tpose_fullarmor
   m_TagString: Player
@@ -33129,7 +33130,6 @@ MonoBehaviour:
   onDisableDisableAnimatorMove:
     m_PersistentCalls:
       m_Calls: []
-  tpCamera: {fileID: 0}
   ignoreTpCamera: 0
   customCameraState: 
   customlookAtPoint: 
@@ -33281,8 +33281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
-  selectedToolbar: 10
+  openCloseWindow: 1
+  selectedToolbar: 2
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
   canUseMeleeStrongAttack_H: 1
@@ -34689,6 +34689,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitMarkerGO: {fileID: 8133098194072402354}
+--- !u!114 &5332471017471564395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825063499215843481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77adca801414574fb1f7426ccf532b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tpCamera: {fileID: 0}
+  _camera: {fileID: 0}
 --- !u!1 &4835554365342949588
 GameObject:
   m_ObjectHideFlags: 0
@@ -40915,7 +40929,6 @@ MonoBehaviour:
   aimCorrectionSmooth: 20
   scopeBackgroundCamera: {fileID: 7513213668777096971}
   currentAimCanvas: {fileID: 0}
-  mainCamera: {fileID: 0}
 --- !u!1 &5619979099014308269
 GameObject:
   m_ObjectHideFlags: 0

@@ -208,17 +208,12 @@ namespace Invector.vCamera
                 return;
             }
 
-            if (!mainTarget.TryGetComponent<vCameraHandler>(out var vCameraHandler))
-            {
-                return;
-            }
-
             if (!targetCamera)
             {
                 targetCamera = Camera.main;
             }
-            vCameraHandler.SetCamera(this, targetCamera);
- 
+
+            SetMainTarget(mainTarget);
             firstUpdated = true;
             useSmooth = true;
             targetLookAt.rotation = startUsingTargetRotation ? mainTarget.rotation : transform.rotation;
@@ -364,10 +359,15 @@ namespace Invector.vCamera
         {
             mainTarget = newTarget;
             currentTarget = newTarget;
-            if (!isInit)
+            if (mainTarget.TryGetComponent<vCameraHandler>(out var vCameraHandler))
             {
-                Init();
+                vCameraHandler.SetCamera(this, targetCamera);
             }
+
+            //if (!isInit)
+            //{
+            //    Init();
+            //}
         }
 
         /// <summary>

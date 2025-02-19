@@ -1224,7 +1224,7 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void UpdateDesiredAimPosition()
         {
-            if (!shooterManager)
+            if (!shooterManager || !IsCameraValid())
             {
                 return;
             }
@@ -1299,7 +1299,7 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void UpdateAimPosition()
         {
-            if (!shooterManager)
+            if (!shooterManager || !IsCameraValid())
             {
                 return;
             }
@@ -1740,7 +1740,7 @@ namespace Invector.vCharacterController
 
         protected virtual void CheckAimConditions()
         {
-            if (!shooterManager)
+            if (!shooterManager || !IsCameraValid())
             {
                 return;
             }
@@ -1937,6 +1937,10 @@ namespace Invector.vCharacterController
 
         #endregion
 
+        protected bool IsCameraValid()
+        {
+            return tpCamera && cameraMain;
+        }
     }
 
     public static partial class vAnimatorParameters
