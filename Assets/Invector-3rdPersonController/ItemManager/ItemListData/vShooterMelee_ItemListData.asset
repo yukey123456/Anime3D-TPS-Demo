@@ -224,7 +224,7 @@ MonoBehaviour:
   - {fileID: -771788112121409092}
   - {fileID: 7470068897206957602}
   - {fileID: -3004059291353469452}
-  inEdition: 1
+  inEdition: 0
   itemsHidden: 1
 --- !u!114 &11427962
 MonoBehaviour:

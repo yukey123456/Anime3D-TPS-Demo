@@ -171,8 +171,8 @@ MonoBehaviour:
     staminaBlockCost: 0
     staminaRecoveryDelay: 0
     ignoreDefense: 1
-    activeRagdoll: 1
-    senselessTime: 0
+    activeRagdoll: 0
+    senselessTime: 0.1
     sender: {fileID: 0}
     receiver: {fileID: 0}
     hitPosition: {x: 0, y: 0, z: 0}

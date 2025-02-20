@@ -459,7 +459,7 @@ MonoBehaviour:
   openCloseWindow: 0
   selectedToolbar: 3
   weaponCategory: Rifle
-  _shootFrequency: 0.16
+  _shootFrequency: 0.11
   isInfinityAmmo: 0
   _ammo: 500
   ignoreTags:
@@ -470,7 +470,7 @@ MonoBehaviour:
   projectile: {fileID: 1000010710861650, guid: 22773fb6a3ebd59429b49fd6e288058e, type: 3}
   muzzle: {fileID: 421838}
   projectilesPerShot: 1
-  dispersion: 1
+  dispersion: 0
   quadDispersion: 0
   velocity: 380
   damageByDistance: 1
@@ -549,9 +549,9 @@ MonoBehaviour:
   handIKTarget: {fileID: 453322}
   aimReference: {fileID: 419996}
   cameraStability: 0.5
-  recoilRight: 0.05
-  recoilLeft: -0.05
-  recoilUp: 0.4
+  recoilRight: 0.03
+  recoilLeft: -0.03
+  recoilUp: 0.25
   reloadSource: {fileID: 0}
   reloadClip: {fileID: 8300000, guid: f4b0865c53d458d49a58b67d16d4b711, type: 3}
   finishReloadClip: {fileID: 0}

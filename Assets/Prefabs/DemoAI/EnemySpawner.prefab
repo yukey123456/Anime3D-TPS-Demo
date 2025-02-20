@@ -63,7 +63,7 @@ MonoBehaviour:
     _randomTimeToSpawn: 0
     _minTimeBetweenSpawn: 3
     _maxTimeBetweenSpawn: 0
-    _maxQuantity: 0
+    _maxQuantity: 6
     _keepMaxQuantity: 0
     _overrideDetectionSettings: 1
     _detectionTags:
@@ -93,7 +93,6 @@ MonoBehaviour:
     onDead:
       m_PersistentCalls:
         m_Calls: []
-    waitForEndOfFrame: 0
   - _spawnID: 
     _prefab: {fileID: 114919679417374238, guid: c4778c7af56e1484e88dd14862568d9a,
       type: 3}
@@ -139,7 +138,6 @@ MonoBehaviour:
     onDead:
       m_PersistentCalls:
         m_Calls: []
-    waitForEndOfFrame: 0
 --- !u!1 &2134880093035034194
 GameObject:
   m_ObjectHideFlags: 0
