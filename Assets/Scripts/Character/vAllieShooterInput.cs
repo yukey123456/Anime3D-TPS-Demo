@@ -2,6 +2,7 @@ using BehaviorDesigner.Runtime;
 using Invector;
 using Invector.vCharacterController;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class vAllieShooterInput : vShooterMeleeInput
 {
@@ -305,7 +306,9 @@ public class vAllieShooterInput : vShooterMeleeInput
 
     public void TogglePlayerControl(bool isOn)
     {
+        SetLockAllInput(!isOn);
         _isControlByPlayer = isOn;
+        controlAimCanvas.canvas.gameObject.SetActive(isOn);
 
         if (isOn)
         {

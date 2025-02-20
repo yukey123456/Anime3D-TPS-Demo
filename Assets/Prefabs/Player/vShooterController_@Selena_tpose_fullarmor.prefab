@@ -32951,7 +32951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseWindow: 0
   selectedToolbar: 3
   unlockCursorOnStart: 0
   showCursorOnStart: 0
@@ -33536,7 +33536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   ammoListData: {fileID: 11400000, guid: 63dd85acb3dbe1746ab7200f610a2d5f, type: 2}
   itemManager: {fileID: 0}
@@ -33668,7 +33668,7 @@ MonoBehaviour:
       isOpen: 0
       isBool: 0
     - name: 6
-      value: 10000
+      value: 480
       isOpen: 0
       isBool: 0
     - name: 10
@@ -34424,7 +34424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseWindow: 0
   selectedToolbar: 0
   enterCoverInput:
     useInput: 1

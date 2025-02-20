@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694333048994829201}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.0019999743, z: 0.50000006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1263706764336509601}
+  m_Father: {fileID: 811416655136791765}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!198 &6218279057347344536
 ParticleSystem:
@@ -748,7 +748,7 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.4
+    sphericalDirectionAmount: 0.35
     randomPositionAmount: 0
     radius:
       value: 0.02
@@ -4918,7 +4918,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4147642658229576901}
-  - {fileID: 1263706764336509601}
+  - {fileID: 811416655136791765}
   - {fileID: 4321071052857621287}
   - {fileID: 4256928882993444357}
   - {fileID: 5002367176250892359}
@@ -4953,12 +4953,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950879722593728919}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.8352654, w: 0.549847}
-  m_LocalPosition: {x: 0.032, y: 0.0019999743, z: 0.12690002}
+  m_LocalRotation: {x: -0.3888005, y: 0.5906218, z: 0.5906218, w: 0.3888005}
+  m_LocalPosition: {x: 0.032, y: -0.3731, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1263706764336509601}
+  m_Father: {fileID: 811416655136791765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 113.287}
 --- !u!198 &7070698162116508118
 ParticleSystem:
@@ -7983,12 +7983,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982812177218548914}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.0019999743, z: 0.50000006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1263706764336509601}
+  m_Father: {fileID: 811416655136791765}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!198 &4765342372249724657
 ParticleSystem:
@@ -8622,7 +8622,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 10
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -8705,7 +8705,7 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.51
+    sphericalDirectionAmount: 0.4
     randomPositionAmount: 0
     radius:
       value: 0.02
@@ -13020,13 +13020,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2520692306707278156}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.000000001396984, y: -2.3283067e-10, z: 0.000000003305104,
-    w: 1}
-  m_LocalPosition: {x: 0, y: 0.0019999743, z: 0.637}
-  m_LocalScale: {x: 1.0000468, y: 1.000045, z: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0.0000000021724256, z: 0.0000000025016977, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.13700004, z: 0}
+  m_LocalScale: {x: 1.0000468, y: 1.0000447, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1263706764336509601}
+  m_Father: {fileID: 811416655136791765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3724337025374166394
 ParticleSystem:
@@ -17895,43 +17894,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &3050724600446575360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1263706764336509601}
-  m_Layer: 0
-  m_Name: VFX_Muzzle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1263706764336509601
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3050724600446575360}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.17, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 811416655136791765}
-  - {fileID: 5003261605232131291}
-  - {fileID: 5823650128445141390}
-  - {fileID: 1479061232594406863}
-  - {fileID: 30590097081375724}
-  - {fileID: 7734167668114996419}
-  m_Father: {fileID: 5569836064193776797}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4645176992263217464
 GameObject:
   m_ObjectHideFlags: 0
@@ -17980,11 +17942,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 3
+  selectedToolbar: 5
   weaponCategory: Rifle_noGrip
-  _shootFrequency: 0.1
+  _shootFrequency: 0.12
   isInfinityAmmo: 0
-  _ammo: 10000
+  _ammo: 460
   ignoreTags:
   - Player
   hitLayer:
@@ -18006,19 +17968,25 @@ MonoBehaviour:
   emptyClip: {fileID: 8300000, guid: 9b2ce00d16b72c34a9b46200421a6def, type: 3}
   testShootEffect: 0
   lightOnShot: {fileID: 3496274471952673643}
-  emittShurykenParticle:
-  - {fileID: 1334451945191483364}
-  - {fileID: 5062718853286217478}
-  - {fileID: 4765342372249724657}
-  - {fileID: 6218279057347344536}
-  - {fileID: 7070698162116508118}
-  - {fileID: 3724337025374166394}
+  emittShurykenParticle: []
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
   onShot:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334451945191483364}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEmptyClip:
     m_PersistentCalls:
       m_Calls: []
@@ -18035,10 +18003,10 @@ MonoBehaviour:
   automaticWeapon: 1
   reloadTime: 1
   reloadOneByOne: 0
-  _clipSize: 3000
+  _clipSize: 40
   dontUseReload: 0
   autoReload: 1
-  autoReloadStyle: 1
+  autoReloadStyle: 2
   ammoID: 13
   moveSetID: 1
   upperBodyID: 2
@@ -18087,48 +18055,58 @@ MonoBehaviour:
   usingScope: 0
   onReload:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4531899414729391793}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCancelReload:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4531899414729391793}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onFinishReload:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4531899414729391793}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onFinishAmmo:
     m_PersistentCalls:
       m_Calls: []
   onEnableAim:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: a3c47d05e2db5d2469c40c5304cdb283,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDisableAim:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: e7d53cc2fd45cce47a9dd9b17b7668a6,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onEnableScope:
     m_PersistentCalls:
       m_Calls: []
@@ -18239,12 +18217,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5478938275980952119}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0.002, z: 0.5}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.17200004, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1263706764336509601}
+  m_Children:
+  - {fileID: 5003261605232131291}
+  - {fileID: 5823650128445141390}
+  - {fileID: 1479061232594406863}
+  - {fileID: 30590097081375724}
+  - {fileID: 7734167668114996419}
+  m_Father: {fileID: 5569836064193776797}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!198 &1334451945191483364
 ParticleSystem:
@@ -18961,7 +18944,7 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.5
+    sphericalDirectionAmount: 0.3
     randomPositionAmount: 0
     radius:
       value: 0.02
@@ -23158,12 +23141,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8289977368612481916}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.0019999743, z: 0.50000006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1263706764336509601}
+  m_Father: {fileID: 811416655136791765}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!198 &5062718853286217478
 ParticleSystem:
@@ -23880,7 +23863,7 @@ ParticleSystem:
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
-    sphericalDirectionAmount: 0.5
+    sphericalDirectionAmount: 0.35
     randomPositionAmount: 0
     radius:
       value: 0.02
@@ -28142,6 +28125,12 @@ PrefabInstance:
 --- !u!4 &4147642658229576901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 99671610a1d3f124f992855104a1d097,
+    type: 3}
+  m_PrefabInstance: {fileID: 4469218417349133102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4531899414729391793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 63420900288265631, guid: 99671610a1d3f124f992855104a1d097,
     type: 3}
   m_PrefabInstance: {fileID: 4469218417349133102}
   m_PrefabAsset: {fileID: 0}

@@ -173,7 +173,16 @@ namespace Invector.vShooter
         public virtual vAmmoDisplay ammoDisplayR { get; set; }
         public virtual vAmmoDisplay ammoDisplayL { get; set; }
         public virtual AmmoHandle ammoHandle { get; set; }
-        public virtual vCamera.vThirdPersonCamera tpCamera { get; set; }
+        public virtual vCamera.vThirdPersonCamera tpCamera
+        {
+            get
+            {
+                if (!_vCameraHandler)
+                    _vCameraHandler = GetComponent<vCameraHandler>();
+
+                return _vCameraHandler ? _vCameraHandler.TpCamera : null;
+            }
+        }
         public virtual bool isReloadingWeapon { get; set; }
 
         protected virtual vWeaponIKAdjust currentWeaponIKAdjust { get; set; }
@@ -184,7 +193,7 @@ namespace Invector.vShooter
         protected virtual float hipfirePrecisionAngle { get; set; }
         protected virtual float hipfirePrecision { get; set; }
         protected virtual float reloadStartTime { get; set; }
-
+        private vCameraHandler _vCameraHandler;
         /// <summary>
         /// The Shot layer of the animation
         /// </summary>
@@ -214,10 +223,6 @@ namespace Invector.vShooter
         public virtual void Start()
         {
             animator = GetComponent<Animator>();
-            if (applyRecoilToCamera)
-            {
-                tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
-            }
             ammoManager = GetComponent<vAmmoManager>();
             if (ammoManager != null)
             {

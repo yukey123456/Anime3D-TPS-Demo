@@ -56,7 +56,6 @@ public class PlayerSwitchingManager : MonoBehaviour
 
     private void EnableInput(vAllieShooterInput input, bool isOn)
     {
-        input.SetLockAllInput(!isOn);
         input.TogglePlayerControl(isOn);
         
         if (input.TryGetComponent(out vItemManager itemManager))
