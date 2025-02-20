@@ -22435,12 +22435,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &3194796959576011616
 GameObject:
   m_ObjectHideFlags: 0
@@ -32595,6 +32595,8 @@ GameObject:
   - component: {fileID: 2071423119858471842}
   - component: {fileID: 3977422136825736846}
   - component: {fileID: 6232358736074440494}
+  - component: {fileID: 5332471017471564395}
+  - component: {fileID: 280773341499896350}
   m_Layer: 8
   m_Name: vShooterController_@Selena_tpose_fullarmor
   m_TagString: Player
@@ -32945,17 +32947,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4825063499215843481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ebb0c68fc51da4b94e466ea07cd110, type: 3}
+  m_Script: {fileID: 11500000, guid: cdc36072f1d3aa04a95e5412841d542b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 2
+  selectedToolbar: 3
   unlockCursorOnStart: 0
   showCursorOnStart: 0
   toggleWalk: 301
   horizontalInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: Horizontal
@@ -32971,7 +32973,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   verticalInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: Vertical
@@ -32987,7 +32989,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   sprintInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: LeftShift
@@ -33003,7 +33005,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   crouchInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: C
@@ -33019,7 +33021,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   strafeInput:
-    useInput: 1
+    useInput: 0
     isAxisInUse: 0
     isUnityInput: 0
     keyboard: Tab
@@ -33129,7 +33131,6 @@ MonoBehaviour:
   onDisableDisableAnimatorMove:
     m_PersistentCalls:
       m_Calls: []
-  tpCamera: {fileID: 0}
   ignoreTpCamera: 0
   customCameraState: 
   customlookAtPoint: 
@@ -33268,6 +33269,8 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   shooterManager: {fileID: 0}
+  _allieBehaviorTree: {fileID: 280773341499896350}
+  _maxAllieAimingDistance: 420
 --- !u!114 &3447194792291671971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33282,7 +33285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 10
+  selectedToolbar: 2
   canUseMeleeBlock_H: 0
   canUseMeleeWeakAttack_H: 1
   canUseMeleeStrongAttack_H: 1
@@ -33533,7 +33536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   ammoListData: {fileID: 11400000, guid: 63dd85acb3dbe1746ab7200f610a2d5f, type: 2}
   itemManager: {fileID: 0}
@@ -33665,7 +33668,7 @@ MonoBehaviour:
       isOpen: 0
       isBool: 0
     - name: 6
-      value: 10000
+      value: 480
       isOpen: 0
       isBool: 0
     - name: 10
@@ -34477,6 +34480,7 @@ MonoBehaviour:
   changeSideAiming: 1
   angleToChangeSideOnAiming: {x: 45, y: 135}
   cornerAimingAngle: {x: -15, y: 90}
+  changeSideBaseOnCorner: 1
   alwaysStandUpOnExit: 1
   crouchRayRadius: 0.2
   crouchRayDistance: 1
@@ -34488,10 +34492,10 @@ MonoBehaviour:
   angleToEnterCorner: -10
   minAngleToStartMoveToCorner: 10
   timeToEnterCorner: 0.5
-  cornerLeftAiming_OffsetPosition: 0.6
+  cornerLeftAiming_OffsetPosition: 0.4
   cornerRightAiming_OffsetPosition: 0.4
   cornerWeightSmooth: 8
-  useHipFireOverBarrier: 1
+  useHipFireOverBarrier: 0
   hipFireTimer: 0.1
   possibleActions:
   - Action
@@ -34667,7 +34671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f42e27e74e0ed439234105ee5b5c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeTarget: {fileID: 0}
+  vCameraHandler: {fileID: 5332471017471564395}
   shakingPresets:
   - shakeType: 0
     strength: 1
@@ -34689,6 +34693,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitMarkerGO: {fileID: 8133098194072402354}
+--- !u!114 &5332471017471564395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825063499215843481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77adca801414574fb1f7426ccf532b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tpCamera: {fileID: 0}
+  _camera: {fileID: 0}
+--- !u!114 &280773341499896350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4825063499215843481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 1
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 11400000, guid: a47183d4b578a3e4fbbc7a605070bc8f, type: 2}
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true,"vCameraHandlermValue":0},{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true,"vAllieShooterInputmValue":1},{"Type":"BehaviorDesigner.Runtime.SharedCollider","Name":"CurrentTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"ShootPoint","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DetectRadius","IsShared":true,"SinglemValue":420}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects:
+        - {fileID: 5332471017471564395}
+        - {fileID: 4148956670805238294}
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.9
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &4835554365342949588
 GameObject:
   m_ObjectHideFlags: 0
@@ -40915,7 +40975,6 @@ MonoBehaviour:
   aimCorrectionSmooth: 20
   scopeBackgroundCamera: {fileID: 7513213668777096971}
   currentAimCanvas: {fileID: 0}
-  mainCamera: {fileID: 0}
 --- !u!1 &5619979099014308269
 GameObject:
   m_ObjectHideFlags: 0
@@ -47095,7 +47154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2500444070759010104
 RectTransform:
   m_ObjectHideFlags: 0

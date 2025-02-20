@@ -192,6 +192,54 @@ MonoBehaviour:
     spineOffset:
       spine: {x: 0, y: 0}
       head: {x: 0, y: 0}
+  - name: CoverCrouchingLeft
+    weaponHandOffset:
+      position: {x: -0.00021455903, y: -0.00057526934, z: 0.00866528}
+      eulerAngles: {x: 8.801468, y: 0.51912326, z: 358.72934}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.054964967, y: 0.022757472, z: 0.009188233}
+      eulerAngles: {x: 74.646904, y: 305.48828, z: 213.25833}
+    supportHintOffset:
+      position: {x: 1e-45, y: 1e-45, z: 1e-45}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingAimingLeft
+    weaponHandOffset:
+      position: {x: 0.07981221, y: -0.09171867, z: -0.0068509355}
+      eulerAngles: {x: 5.4757223, y: 0.41475484, z: 358.91794}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.042436365, y: 0.0003076498, z: 0.008642096}
+      eulerAngles: {x: 71.319954, y: 346.48996, z: 268.7756}
+    supportHintOffset:
+      position: {x: 0.009917123, y: -0.0676759, z: 0.06746465}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
+  - name: CoverCrouchingCornerAimingLeft
+    weaponHandOffset:
+      position: {x: 0.07963702, y: -0.0982925, z: 0.02482624}
+      eulerAngles: {x: 11.030658, y: 10.601939, z: 317.57788}
+    weaponHintOffset:
+      position: {x: 0, y: 0, z: 0}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    supportHandOffset:
+      position: {x: -0.042436365, y: 0.00030764978, z: 0.008642096}
+      eulerAngles: {x: 71.319954, y: 346.48996, z: 268.77557}
+    supportHintOffset:
+      position: {x: 0.009917123, y: -0.0676759, z: 0.06746465}
+      eulerAngles: {x: -0, y: 0, z: 0}
+    spineOffset:
+      spine: {x: 0, y: 0}
+      head: {x: 0, y: 0}
   standingRight:
     name: Standing
     weaponHandOffset:

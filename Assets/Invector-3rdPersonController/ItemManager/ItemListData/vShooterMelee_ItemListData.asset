@@ -81,6 +81,54 @@ MonoBehaviour:
   onDestroy:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-3004059291353469452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: Scifi Rocket Launcher
+  m_EditorClassIdentifier: 
+  id: 33
+  description: Very destructive
+  type: 2
+  icon: {fileID: 21300000, guid: 89ba1f6f55195c944aad86c1767dfe52, type: 3}
+  stackable: 0
+  createNewItem: 0
+  maxStack: 1
+  amount: 0
+  originalObject: {fileID: 567905157956426428, guid: 3855058e53e21024f973e1431e9569c0,
+    type: 3}
+  dropObject: {fileID: 170868, guid: 29c64441cf150e1478de24e3252446ec, type: 3}
+  attributes:
+  - name: 2
+    value: 85
+    isOpen: 0
+    isBool: 0
+  - name: 6
+    value: 1
+    isOpen: 0
+    isBool: 0
+  isInEquipArea: 0
+  isEquiped: 0
+  destroyAfterUse: 0
+  canBeEquipped: 1
+  canBeUsed: 0
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: HighBack
+  DisableAnim: HighBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 1
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-771788112121409092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,6 +222,8 @@ MonoBehaviour:
   - {fileID: 9220526243217188814}
   - {fileID: 1922908481176216468}
   - {fileID: -771788112121409092}
+  - {fileID: 7470068897206957602}
+  - {fileID: -3004059291353469452}
   inEdition: 0
   itemsHidden: 1
 --- !u!114 &11427962
@@ -1495,6 +1545,45 @@ MonoBehaviour:
     type: 3}
   dropObject: {fileID: 4018256157275831458, guid: 83a0af047816b1e44b48e9b37982ccba,
     type: 3}
+  attributes: []
+  isInEquipArea: 0
+  isEquiped: 0
+  destroyAfterUse: 0
+  canBeEquipped: 1
+  canBeUsed: 0
+  canBeDroped: 1
+  canBeDestroyed: 1
+  EnableAnim: LowBack
+  DisableAnim: LowBack
+  enableDelayTime: 0.5
+  disableDelayTime: 0.5
+  customHandler: 
+  twoHandWeapon: 0
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7470068897206957602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1adabc1ae49fd3c44a36cc9152ebb0f9, type: 3}
+  m_Name: Scifi Rocket Missle
+  m_EditorClassIdentifier: 
+  id: 32
+  description: 
+  type: 3
+  icon: {fileID: 21300000, guid: 7799f4e3c66ec9b47a45552ab162ea87, type: 3}
+  stackable: 1
+  createNewItem: 1
+  maxStack: 100
+  amount: 0
+  originalObject: {fileID: 0}
+  dropObject: {fileID: 138756, guid: 4f038aa3db9cf9d4cace8c95a2c62f18, type: 3}
   attributes: []
   isInEquipArea: 0
   isEquiped: 0

@@ -121,7 +121,7 @@ namespace Invector.vCamera
         protected virtual bool firstUpdated { get; set; }
 
         protected Quaternion fixedRotation;
-        internal Camera targetCamera;
+        public Camera targetCamera;
 
         protected float transformWeight;
         protected virtual float mouseXStart { get; set; }
@@ -195,7 +195,6 @@ namespace Invector.vCamera
 
         protected virtual void Start()
         {
-
             Init();
         }
 
@@ -209,6 +208,12 @@ namespace Invector.vCamera
                 return;
             }
 
+            if (!targetCamera)
+            {
+                targetCamera = Camera.main;
+            }
+
+            SetMainTarget(mainTarget);
             firstUpdated = true;
             useSmooth = true;
             targetLookAt.rotation = startUsingTargetRotation ? mainTarget.rotation : transform.rotation;
@@ -217,10 +222,6 @@ namespace Invector.vCamera
             startPosition = selfRigidbody.position;
             startRotation = selfRigidbody.rotation;
             initialCameraRotation = smoothCameraRotation;
-            if (!targetCamera)
-            {
-                targetCamera = Camera.main;
-            }
 
             currentTarget = mainTarget;
             switchRight = 1;
@@ -358,10 +359,15 @@ namespace Invector.vCamera
         {
             mainTarget = newTarget;
             currentTarget = newTarget;
-            if (!isInit)
+            if (mainTarget.TryGetComponent<vCameraHandler>(out var vCameraHandler))
             {
-                Init();
+                vCameraHandler.SetCamera(this, targetCamera);
             }
+
+            //if (!isInit)
+            //{
+            //    Init();
+            //}
         }
 
         /// <summary>

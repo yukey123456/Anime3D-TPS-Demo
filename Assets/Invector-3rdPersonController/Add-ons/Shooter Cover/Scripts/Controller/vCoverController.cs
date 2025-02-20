@@ -1,5 +1,6 @@
 ﻿using Invector.vCharacterController;
 using Invector.vCharacterController.vActions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -82,6 +83,8 @@ namespace Invector.vCover
         public Vector2 angleToChangeSideOnAiming = new Vector3(45, 135);
         [vMinMax(minLimit = -180, maxLimit = 180), Tooltip("Angle to keep in corner state pose when aiming")]
         public Vector2 cornerAimingAngle = new Vector2(-15, 90);
+        [Tooltip("Change Side Base On Cover Point Corner")]
+        public bool changeSideBaseOnCorner = true;
 
         [vSeparator("Crouch Settings")]
         [Tooltip("Standup when exiting a Cover Crouched or Keep it crouched")]
@@ -460,10 +463,15 @@ namespace Invector.vCover
 
         #region Cover Action
 
+        //Nhan was here
         public void ForceEnterCover(vCoverPoint coverPoint)
         {
             timeToExit = Time.time + .5f;
             currentCoverRoutine = (autoEnterCover && !inCover) || !autoTravelToNextCover ? StartCoroutine(EnterCoverPointRoutine(coverPoint)) : StartCoroutine(GoToCoverPointRoutine(coverPoint, wayPath.vCopy()));
+            if (changeSideBaseOnCorner)
+            {
+                side = coverPoint.corner == vCoverPoint.Corner.Right ? Side.right : Side.left;
+            }
             possibleCoverPoint = null;
         }
 
@@ -574,7 +582,7 @@ namespace Invector.vCover
         /// </summary>
         protected virtual void HandlePossibleCoverPoint()
         {
-            if (goingToCoverPoint)
+            if (goingToCoverPoint )
             {
                 return;
             }
@@ -670,6 +678,9 @@ namespace Invector.vCover
         /// <returns></returns>
         protected virtual vCoverPoint GetCoverPoint()
         {
+            if (!IsCameraValid())
+                return null;
+
             vCoverPoint coverPoint = null;
             Vector3 cameraDir = shooterInput.cameraMain.transform.forward;
             Ray rayCamera = new Ray(shooterInput.cameraMain.transform.position, shooterInput.cameraMain.transform.forward);
@@ -691,6 +702,11 @@ namespace Invector.vCover
             }
 
             return coverPoint;
+        }
+
+        protected bool IsCameraValid()
+        {
+            return shooterInput.tpCamera && shooterInput.cameraMain;
         }
 
         /// <summary>
@@ -1112,7 +1128,6 @@ namespace Invector.vCover
 
             inCover = false;
             goingToCoverPoint = true;
-
             Vector3 coverDirection = enterCoverFromLeftSide ? target.transform.right : -target.transform.right;
             bool needToCrouch = CheckCoverHeight(target, false);
             float stoppingDistance = .5f;
@@ -1390,7 +1405,7 @@ namespace Invector.vCover
         /// <returns></returns>
         protected virtual bool EnterCoverFromLeftSide(vCoverPoint coverPoint)
         {
-            if (coverPoint == null)
+            if (coverPoint == null || !shooterInput.cameraMain)
             {
                 return false;
             }
@@ -1711,6 +1726,7 @@ namespace Invector.vCover
             ControlCameraState();
             ControlIKState();
             ControlExitCoverByAngle();
+
         }
 
         /// <summary>
@@ -1845,7 +1861,9 @@ namespace Invector.vCover
         /// </summary>
         protected virtual void ControlInputDirectionInCover()
         {
-            cameraRightDir = shooterInput.cameraMain.transform.right;
+            //cameraRightDir = shooterInput.cameraMain.transform.right;
+            cameraRightDir = shooterInput.cameraMain? shooterInput.cameraMain.transform.right : transform.right; //Nhan was here
+
             cameraRightDir.y = 0;
             cameraRightDir.Normalize();
             //get the forward direction relative to referenceTransform Right
@@ -1940,6 +1958,11 @@ namespace Invector.vCover
                         }
                     }
                 }
+
+                if (changeSideBaseOnCorner && currentCoverPoint) //Nhan was here
+                {
+                    side = currentCoverPoint.corner == vCoverPoint.Corner.Left ? Side.left : Side.right;
+                }
             }
             else ///When Aiming
             {
@@ -1977,7 +2000,14 @@ namespace Invector.vCover
             }
 
             ///Store the last side update
-            enterCoverFromLeftSide = side == Side.left;
+            if (changeSideBaseOnCorner)
+            {
+                enterCoverFromLeftSide = EnterCoverFromLeftSide(currentCoverPoint);
+            }
+            else
+            {
+                enterCoverFromLeftSide = side == Side.left;
+            }
         }
 
         /// <summary>
@@ -2166,7 +2196,7 @@ namespace Invector.vCover
                 isInRightCornerPositionRange = false;
             }
 
-            if (shooterInput.aimInput.GetButtonDown())
+            if (shooterInput.IsAimInputState(InputState.ButtonDown))
             {
                 if (side == Side.right)
                 {
@@ -2283,7 +2313,13 @@ namespace Invector.vCover
                 cameraSwtichLeft = 0;
                 cameraSwtichRight = 0;
             }
-            shooterInput.tpCamera.switchRight = switchRight;
+
+            //shooterInput.tpCamera.switchRight = switchRight;
+            if (shooterInput.tpCamera) //Nhan was here
+            {
+                shooterInput.tpCamera.switchRight = switchRight;
+            }
+
             if (shooterInput.cc.isCrouching)
             {
                 SetCameraState(shooterInput.IsAiming ? overBarrier ? aimingOverBarrierCameraState : crouchAimingCameraState : crouchCameraState);
@@ -2613,6 +2649,9 @@ namespace Invector.vCover
         {
             get
             {
+                if (!shooterInput.cameraMain) 
+                    return shooterInput.cc._capsuleCollider.height / 2f;
+
                 var dist = Vector3.Distance(transform.position, shooterInput.cameraMain.transform.position);
                 var p = shooterInput.cameraMain.transform.position + shooterInput.cameraMain.transform.forward * dist;
 
@@ -2661,7 +2700,7 @@ namespace Invector.vCover
         protected virtual bool CheckCoverHeight(vCoverPoint coverPoint, bool checkAimingHeight)
         {
             var entrance = !inCover;
-            var aimingDirection = shooterInput.cameraMain.transform.forward;
+            var aimingDirection = shooterInput.cameraMain ? shooterInput.cameraMain.transform.forward : shooterInput.transform.forward;
             aimingDirection.y = 0;
             var position = entrance ? coverPoint.posePosition : helper.position;
             var direction = coverPoint.transform.forward;

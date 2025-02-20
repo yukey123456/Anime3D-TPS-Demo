@@ -44,7 +44,7 @@ namespace Invector.vItemManager
 
             else
             {
-                manager.equipPoints = new List<EquipPoint>();
+                manager.equipPoints = new List<EquipPoint>(); 
             }
 
             events = new SerializedProperty[]

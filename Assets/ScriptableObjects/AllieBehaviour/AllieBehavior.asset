@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b23f08d2ae4cba14087c1ed36193d82b, type: 3}
+  m_Name: AllieBehavior
+  m_EditorClassIdentifier: 
+  mBehaviorSource:
+    behaviorName: AllieBehavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(229.107574,-11.2042084)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-4.89242554,118.795792)"},"ID":1,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-2.94458675,171.250351)","Comment":"Controlled
+        by AI"},"ID":2,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-240.482986,460.3143)","Comment":"Check
+        Target"},"ID":3,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"IsvHealthControllerAlive","NodeData":{"Offset":"(-213.797516,213.494537)"},"ID":4,"Name":"Is
+        Target Valid","Instant":true,"SharedColliderTargetCollider":{"Type":"BehaviorDesigner.Runtime.SharedCollider","Name":"CurrentTarget","IsShared":true}},{"Type":"vFindEnemyTarget","NodeData":{"Offset":"(-63.23607,209.392365)"},"ID":5,"Name":"V
+        Find Enemy Target","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"LayerMaskTargetLayer":512,"SharedFloatDetectRadius":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DetectRadius","IsShared":true,"SinglemValue":420},"BooleanFailureIfNullTarget":true,"SharedColliderOutputTarget":{"Type":"BehaviorDesigner.Runtime.SharedCollider","Name":"CurrentTarget","IsShared":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.ReturnFailure","NodeData":{"Offset":"(69.2751,393.3263)","Comment":"When
+        there''s no Target"},"ID":6,"Name":"Return Failure","Instant":true,"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(2.72785282,126.362793)","Comment":"Stop
+        Aim and Shoot"},"ID":7,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"vAllieShoot","NodeData":{"Offset":"(-70,120.000031)"},"ID":8,"Name":"V
+        Allie Stop Shoot","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"SharedVector3ShootPostion":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":null,"Vector3mValue":"(0,0,0)"},"BooleanShoot":false},{"Type":"vToggleAllieAiming","NodeData":{"Offset":"(80,120.000031)"},"ID":9,"Name":"V
+        Stop Allie Aiming","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"BooleanIsAim":false}]}]}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(202.3469,472.538483)","Comment":"Aim
+        and Shoot"},"ID":10,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"vGetColliderCenter","NodeData":{"Offset":"(-208.275909,180)"},"ID":11,"Name":"V
+        Get Shoot Point","Instant":true,"SharedColliderSharedCollider":{"Type":"BehaviorDesigner.Runtime.SharedCollider","Name":"CurrentTarget","IsShared":true},"SharedVector3Output":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"ShootPoint","IsShared":true,"Vector3mValue":"(0,0,0)"}},{"Type":"vToggleAllieAiming","NodeData":{"Offset":"(-58.2759056,180)"},"ID":12,"Name":"V
+        Toggle Allie Aiming","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"BooleanIsAim":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(52.5232,290)"},"ID":13,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0.2},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0.5}},{"Type":"vAllieShoot","NodeData":{"Offset":"(174.703888,294.090942)"},"ID":14,"Name":"V
+        Allie Shoot","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"SharedVector3ShootPostion":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"ShootPoint","IsShared":true,"Vector3mValue":"(0,0,0)"},"BooleanShoot":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(296.130432,289.551758)"},"ID":15,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ShootMinDuration","IsShared":true,"SinglemValue":1.2},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ShootMaxDuration","IsShared":true,"SinglemValue":0.7}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(678.7472,284.247681)","Comment":"Stop
+        Aim and Shoot"},"ID":16,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"vAllieShoot","NodeData":{"Offset":"(-71.12901,168.305847)"},"ID":17,"Name":"V
+        Allie Stop Shoot","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"SharedVector3ShootPostion":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":null,"Vector3mValue":"(0,0,0)"},"BooleanShoot":false},{"Type":"vToggleAllieAiming","NodeData":{"Offset":"(87.7023,168.572266)"},"ID":18,"Name":"V
+        Stop Allie Aiming","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"BooleanIsAim":false},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(183.737625,289.004364)"},"ID":19,"Name":"Idle","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0.6},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1.5}}]}]}]},"DetachedTasks":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-290,300)","Comment":"Controlled
+        by Player"},"ID":20,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"IsvControlByPlayer","NodeData":{"Offset":"(-135.059448,111.363632)"},"ID":21,"Name":"Isv
+        Control By Player","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true}},{"Type":"vToggleAllieAiming","NodeData":{"Offset":"(-37.6190376,203.809509)"},"ID":22,"Name":"V
+        Stop Allie Aiming","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"BooleanIsAim":false},{"Type":"vAllieShoot","NodeData":{"Offset":"(54.285717,305.714264)"},"ID":23,"Name":"V
+        Allie Stop Shoot","Instant":true,"SharedvAllieShooterInputvAllieShooterInput":{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},"SharedVector3ShootPostion":{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":null,"Vector3mValue":"(0,0,0)"},"BooleanShoot":false}]}],"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DetectRadius","IsShared":true,"SinglemValue":420},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ShootMaxDuration","IsShared":true,"SinglemValue":0.7},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"ShootMinDuration","IsShared":true,"SinglemValue":1.2},{"Type":"BehaviorDesigner.Runtime.SharedCollider","Name":"CurrentTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"ShootPoint","IsShared":true,"Vector3mValue":"(0,0,0)"}]}'
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 1.7.9

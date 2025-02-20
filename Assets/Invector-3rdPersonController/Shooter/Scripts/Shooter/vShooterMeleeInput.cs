@@ -303,7 +303,8 @@ namespace Invector.vCharacterController
             {
                 if (!_controlAimCanvas)
                 {
-                    _controlAimCanvas = FindObjectOfType<vControlAimCanvas>();
+                    //_controlAimCanvas = FindObjectOfType<vControlAimCanvas>();
+                    _controlAimCanvas = GetComponentInChildren<vControlAimCanvas>(); //Nhan was here
                     if (_controlAimCanvas)
                     {
                         _controlAimCanvas.Init(cc);
@@ -692,11 +693,11 @@ namespace Invector.vCharacterController
 
             if (!cc.isRolling)
             {
-                isAimingByInput = (!isReloading || shooterManager.keepAimingWhenReload) && (aimInput.GetButton() || (shooterManager.alwaysAiming && CurrentActiveWeapon)) && !cc.ragdolled && !cc.customAction
+                isAimingByInput = (!isReloading || shooterManager.keepAimingWhenReload) && (IsAimInputState(InputState.Button) || (shooterManager.alwaysAiming && CurrentActiveWeapon)) && !cc.ragdolled && !cc.customAction
                     || (cc.customAction && cc.isJumping);
             }
 
-            if (aimInput.GetButtonUp() && !shotInput.GetButton())
+            if (IsAimInputState(InputState.ButtonUp) && !shotInput.GetButton())
             {
                 _aimTiming = 0f;
             }
@@ -1151,25 +1152,25 @@ namespace Invector.vCharacterController
         public override void UpdateCameraStates()
         {
             // CAMERA STATE - you can change the CameraState here, the bool means if you want lerp of not, make sure to use the same CameraState String that you named on TPCameraListData
-            if (ignoreTpCamera)
+            if (ignoreTpCamera || !tpCamera)
             {
                 return;
             }
 
-            if (tpCamera == null)
-            {
-                tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
-                if (tpCamera == null)
-                {
-                    return;
-                }
+            //if (tpCamera == null)
+            //{
+            //    tpCamera = FindObjectOfType<vCamera.vThirdPersonCamera>();
+            //    if (tpCamera == null)
+            //    {
+            //        return;
+            //    }
 
-                if (tpCamera)
-                {
-                    tpCamera.SetMainTarget(this.transform);
-                    tpCamera.Init();
-                }
-            }
+            //    if (tpCamera)
+            //    {
+            //        tpCamera.SetMainTarget(this.transform);
+            //        tpCamera.Init();
+            //    }
+            //}
 
             if (changeCameraState)
             {
@@ -1224,7 +1225,7 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void UpdateDesiredAimPosition()
         {
-            if (!shooterManager)
+            if (!shooterManager || !IsCameraValid())
             {
                 return;
             }
@@ -1299,7 +1300,7 @@ namespace Invector.vCharacterController
         /// </summary>
         protected virtual void UpdateAimPosition()
         {
-            if (!shooterManager)
+            if (!shooterManager || !IsCameraValid())
             {
                 return;
             }
@@ -1740,12 +1741,10 @@ namespace Invector.vCharacterController
 
         protected virtual void CheckAimConditions()
         {
-            if (!shooterManager)
+            if (!shooterManager) //Nhan was here
             {
                 return;
             }
-
-            var weaponSide = (tpCamera.switchRight < 0 ? -1 : 1);
 
             if (CurrentActiveWeapon == null)
             {
@@ -1873,13 +1872,12 @@ namespace Invector.vCharacterController
 
         protected virtual void UpdateAimHud()
         {
-
             if (!shooterManager || !controlAimCanvas)
             {
                 return;
             }
 
-            if (CurrentActiveWeapon == null)
+            if (CurrentActiveWeapon == null || !cameraMain)
             {
                 return;
             }
@@ -1937,6 +1935,34 @@ namespace Invector.vCharacterController
 
         #endregion
 
+        #region Input Checking
+        public virtual bool IsAimInputState(InputState state)
+        {
+            switch (state)
+            {
+                case InputState.Button:
+                    return aimInput.GetButton();
+                case InputState.ButtonDown:
+                    return aimInput.GetButtonDown();
+                case InputState.ButtonUp:
+                    return aimInput.GetButtonUp();
+            }
+            return false;
+        }
+
+        #endregion
+
+        protected bool IsCameraValid()
+        {
+            return tpCamera && cameraMain;
+        }
+    }
+
+    public enum InputState
+    {
+        Button,
+        ButtonDown,
+        ButtonUp,
     }
 
     public static partial class vAnimatorParameters
