@@ -13100,7 +13100,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
   randomSeed: 0
@@ -17942,7 +17942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 0
+  selectedToolbar: 3
   weaponCategory: Rifle_noGrip
   _shootFrequency: 0.3
   isInfinityAmmo: 0
@@ -17964,7 +17964,7 @@ MonoBehaviour:
   _minDamage: 5
   _maxDamage: 10
   source: {fileID: 1232761302025890024}
-  fireClip: {fileID: 8300000, guid: 097e8235e0162d64ba53da9ef4ab8d61, type: 3}
+  fireClip: {fileID: 8300000, guid: fe90135ad668a394287ca68605d4763b, type: 3}
   emptyClip: {fileID: 8300000, guid: 9b2ce00d16b72c34a9b46200421a6def, type: 3}
   testShootEffect: 0
   lightOnShot: {fileID: 3496274471952673643}
@@ -18010,7 +18010,7 @@ MonoBehaviour:
   ammoID: 13
   moveSetID: 1
   upperBodyID: 2
-  shotID: 2
+  shotID: 3
   reloadID: 2
   equipID: 0
   alignRightHandToAim: 1
@@ -18034,9 +18034,9 @@ MonoBehaviour:
   handIKTarget: {fileID: 4256928882993444357}
   aimReference: {fileID: 5002367176250892359}
   cameraStability: 0.5
-  recoilRight: 0.08
-  recoilLeft: -0.08
-  recoilUp: 0.4
+  recoilRight: 0.12
+  recoilLeft: -0.12
+  recoilUp: 2
   reloadSource: {fileID: 0}
   reloadClip: {fileID: 8300000, guid: f4b0865c53d458d49a58b67d16d4b711, type: 3}
   finishReloadClip: {fileID: 0}

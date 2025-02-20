@@ -1256,6 +1256,7 @@ GameObject:
   - component: {fileID: 114394985069938396}
   - component: {fileID: 114354233147395264}
   - component: {fileID: 726900163402945305}
+  - component: {fileID: 1211525535704789813}
   m_Layer: 9
   m_Name: AI - BasicMelee_Armed
   m_TagString: Enemy
@@ -1388,8 +1389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9fb374bd0aad974e9798f071eb5ecb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openCloseEvents: 0
-  openCloseWindow: 1
+  openCloseEvents: 1
+  openCloseWindow: 0
   selectedToolbar: 0
   _fsmBehaviour: {fileID: 11400000, guid: c05c3f65b1fe1bd4ba379ae6f3cfb67f, type: 2}
   _stop: 0
@@ -1426,7 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 12
+  selectedToolbar: 13
   _isDead: 1
   _currentHealth: 0
   isImmortal: 0
@@ -1443,7 +1444,19 @@ MonoBehaviour:
       m_Calls: []
   _onDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1211525535704789813}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onChangeHealth:
     m_PersistentCalls:
       m_Calls: []
@@ -1482,15 +1495,15 @@ MonoBehaviour:
   useRootMotion: 0
   freeSpeed:
     rotationSpeed: 10
-    walkSpeed: 2
-    runningSpeed: 3
-    sprintSpeed: 4
+    walkSpeed: 1
+    runningSpeed: 2
+    sprintSpeed: 3
     crouchSpeed: 2
   strafeSpeed:
     rotationSpeed: 10
-    walkSpeed: 2
-    runningSpeed: 3
-    sprintSpeed: 4
+    walkSpeed: 1
+    runningSpeed: 2
+    sprintSpeed: 3
     crouchSpeed: 2
   _useStepOffSet: 1
   stepOffsetEnd: 0.45
@@ -1814,6 +1827,25 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.9, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1211525535704789813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331032742114898}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd39039863a63e48ad1e9260ed01bc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openCloseEvents: 0
+  openCloseWindow: 0
+  selectedToolbar: 0
+  delay: 4
+  onDestroy:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1346438877116070
 GameObject:
   m_ObjectHideFlags: 0

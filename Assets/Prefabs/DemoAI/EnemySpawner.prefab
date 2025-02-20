@@ -60,11 +60,11 @@ MonoBehaviour:
     _timeToFirstSpawn: 2
     _enableFSMOnSpawn: 0
     _delayToEnableFSM: 0
-    _randomTimeToSpawn: 0
-    _minTimeBetweenSpawn: 3
-    _maxTimeBetweenSpawn: 0
-    _maxQuantity: 6
-    _keepMaxQuantity: 0
+    _randomTimeToSpawn: 1
+    _minTimeBetweenSpawn: 1
+    _maxTimeBetweenSpawn: 2
+    _maxQuantity: 12
+    _keepMaxQuantity: 1
     _overrideDetectionSettings: 1
     _detectionTags:
       tags:
@@ -101,14 +101,14 @@ MonoBehaviour:
     - {fileID: 954338331613633596}
     - {fileID: 3327536066394438079}
     - {fileID: 6407960562321585261}
-    _timeToFirstSpawn: 2
+    _timeToFirstSpawn: 2.5
     _enableFSMOnSpawn: 0
     _delayToEnableFSM: 0
-    _randomTimeToSpawn: 0
+    _randomTimeToSpawn: 1
     _minTimeBetweenSpawn: 0.5
-    _maxTimeBetweenSpawn: 0
-    _maxQuantity: 50
-    _keepMaxQuantity: 0
+    _maxTimeBetweenSpawn: 1
+    _maxQuantity: 40
+    _keepMaxQuantity: 1
     _overrideDetectionSettings: 1
     _detectionTags:
       tags:
@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Bits: 0
     _spawnDestinations:
     - {fileID: 377895253603668461}
-    _destinationSpeed: 2
+    _destinationSpeed: 1
     _setWaypointAreaDelay: 0
     _waypointArea: {fileID: 0}
     _randomDestination: 0

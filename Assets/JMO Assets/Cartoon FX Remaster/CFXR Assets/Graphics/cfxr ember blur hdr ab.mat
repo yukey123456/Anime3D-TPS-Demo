@@ -14,10 +14,11 @@ Material:
   m_ValidKeywords:
   - _ALPHABLEND_ON
   - _CFXR_HDR_BOOST
+  - _CFXR_LIGHTING_INDIRECT
   - _CFXR_SINGLE_CHANNEL
+  - _EMISSION
   - _FADING_ON
   m_InvalidKeywords:
-  - _
   - _CFXR_DITHERED_SHADOWS_OFF
   - _CFXR_OVERLAYBLEND_RGBA
   - _CFXR_OVERLAYTEX_OFF
@@ -116,7 +117,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HdrBoost: 1
-    - _HdrMultiply: 10
+    - _HdrMultiply: 5
     - _IndirectLightingMix: 0.5
     - _InvertDissolveTex: 0
     - _LightingWorldPosStrength: 0.2
@@ -141,11 +142,11 @@ Material:
     - _UseDissolve: 0
     - _UseDissolveOffsetUV: 0
     - _UseEF: 0
-    - _UseEmission: 0
+    - _UseEmission: 1
     - _UseFB: 0
     - _UseFontColor: 0
     - _UseGradientMap: 0
-    - _UseLighting: 0
+    - _UseLighting: 2
     - _UseLightingWorldPosOffset: 0
     - _UseNormalMap: 0
     - _UseSP: 1
