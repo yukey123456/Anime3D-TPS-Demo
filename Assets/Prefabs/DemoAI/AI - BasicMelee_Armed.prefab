@@ -1255,6 +1255,7 @@ GameObject:
   - component: {fileID: 114473965105003986}
   - component: {fileID: 114394985069938396}
   - component: {fileID: 114354233147395264}
+  - component: {fileID: 726900163402945305}
   m_Layer: 9
   m_Name: AI - BasicMelee_Armed
   m_TagString: Enemy
@@ -1362,7 +1363,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1331032742114898}
   m_Enabled: 0
   m_AgentTypeID: 0
-  m_Radius: 0.3
+  m_Radius: 0.15
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 40
@@ -1373,7 +1374,7 @@ NavMeshAgent:
   m_AutoRepath: 0
   m_Height: 1.8
   m_BaseOffset: 0
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 5
   m_ObstacleAvoidanceType: 2
 --- !u!114 &114015973625877478
 MonoBehaviour:
@@ -1425,7 +1426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 1
-  selectedToolbar: 11
+  selectedToolbar: 12
   _isDead: 1
   _currentHealth: 0
   isImmortal: 0
@@ -1563,7 +1564,7 @@ MonoBehaviour:
   _timeToLostWithoutSight: 5
   _detectLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 524544
   _detectTags:
     tags:
     - Player
@@ -1626,7 +1627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openCloseEvents: 0
-  openCloseWindow: 0
+  openCloseWindow: 1
   selectedToolbar: 0
   Members:
   - transform: {fileID: 4219779549034332}
@@ -1663,6 +1664,7 @@ MonoBehaviour:
   hitProperties:
     hitDamageTags:
     - Player
+    - Untagged
     useRecoil: 1
     drawRecoilGizmos: 0
     recoilRange: 90
@@ -1796,6 +1798,22 @@ MonoBehaviour:
   defaultDamageEffects:
   - {fileID: 120346, guid: b8f2fe1ee1a01724cb72f5b0e6bd2eef, type: 3}
   customDamageEffects: []
+--- !u!208 &726900163402945305
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331032742114898}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.3, y: 0.9, z: 0.3}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1346438877116070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2432,7 @@ GameObject:
   - component: {fileID: 4897068916582644}
   - component: {fileID: 114293401023129974}
   - component: {fileID: 65284621165027102}
-  m_Layer: 15
+  m_Layer: 2
   m_Name: hitBox
   m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
@@ -3556,7 +3574,7 @@ GameObject:
   - component: {fileID: 4622134817859788}
   - component: {fileID: 114434219765285882}
   - component: {fileID: 65845153435755326}
-  m_Layer: 15
+  m_Layer: 2
   m_Name: hitBox
   m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
@@ -3660,7 +3678,7 @@ GameObject:
   - component: {fileID: 4074184927050690}
   - component: {fileID: 114789655385911314}
   - component: {fileID: 65615954696570146}
-  m_Layer: 15
+  m_Layer: 2
   m_Name: hitBox
   m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}
@@ -4810,7 +4828,7 @@ GameObject:
   - component: {fileID: 4530211212150468}
   - component: {fileID: 114595584271267890}
   - component: {fileID: 65379318016874638}
-  m_Layer: 15
+  m_Layer: 2
   m_Name: hitBox
   m_TagString: Ignore Ragdoll
   m_Icon: {fileID: 0}

@@ -55,8 +55,6 @@ public class AISpawnSpec
         {
             inSpawn = true;
 
-            yield return new WaitForEndOfFrame();
-
             var spawnPoints = _def.SpawnPoints.FindAll(sp => sp.isValid);
 
             if (spawnPoints.Count > 0)
@@ -65,7 +63,7 @@ public class AISpawnSpec
 
                 yield return new WaitForSeconds(_def.GetSpawnTime(!firstSpawnDone));
 
-                var randomPoint = Mathf.Clamp(Random.Range(-1, spawnPoints.Count), 0, spawnPoints.Count - 1);
+                var randomPoint = Random.Range(0, spawnPoints.Count);
                 var point = spawnPoints[randomPoint];
 
                 var prefab = _def.GetPrefabToSpawn();
@@ -81,11 +79,9 @@ public class AISpawnSpec
                 {
                     ai.onDead.AddListener(OnDead);
                     
-                    _def.onSpawn.Invoke();
+                    //_def.onSpawn.Invoke();
 
                     aiSpawnedList.Add(ai);
-
-                    yield return new WaitForSeconds(.1f);
 
                     var fsm = ai.GetComponent<vIFSMBehaviourController>();
                     if (fsm != null)
@@ -113,7 +109,7 @@ public class AISpawnSpec
 
     private bool CheckCanSpawn()
     {
-        return _def.SpawnedCountReachedLimit(aiSpawnedList.Count, spawned)
+        return !_def.SpawnedCountReachedLimit(aiSpawnedList.Count, spawned)
             && IsThereAnySpawnPoint()
             && _def.IsThereAnyPrefab();
     }

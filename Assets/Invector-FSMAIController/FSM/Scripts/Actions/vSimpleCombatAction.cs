@@ -1,5 +1,4 @@
-﻿using Invector.vEventSystems;
-using UnityEngine;
+﻿using UnityEngine.AI;
 
 namespace Invector.vCharacterController.AI.FSMBehaviour
 {
@@ -51,13 +50,28 @@ namespace Invector.vCharacterController.AI.FSMBehaviour
         {
             controller.InitAttackTime();
             controller.isInCombat = true;
+            
+            if (controller.gameObject.TryGetComponent(out NavMeshObstacle obstacle))
+            {
+                obstacle.enabled = true;
+            }
         }
 
         protected virtual void OnExitCombat(vIControlAICombat controller)
         {
+            if (controller.currentTarget.transform == null
+                || controller.currentTarget.isDead
+                || !controller.targetInLineOfSight)
+            {
+                controller.ResetAttackTime();
+            }
 
-            if (controller.currentTarget.transform == null || controller.currentTarget.isDead || !controller.targetInLineOfSight) controller.ResetAttackTime();
             controller.isInCombat = false;
+
+            if (controller.gameObject.TryGetComponent(out NavMeshObstacle obstacle))
+            {
+                obstacle.enabled = true;
+            }
         }
 
         protected virtual void OnUpdateCombat(vIControlAICombat controller)

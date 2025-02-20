@@ -119,7 +119,7 @@ public class AISpawnData
 
     public bool SpawnedCountReachedLimit(int aliveCount, int spawnedCount)
     {
-        return (_keepMaxQuantity ? aliveCount : spawnedCount) < _maxQuantity;
+        return (_keepMaxQuantity ? aliveCount : spawnedCount) >= _maxQuantity;
     }
 
     public bool IsThereAnyPrefab()
@@ -147,18 +147,13 @@ public class AISpawnData
         {
             if (_randomDestination)
             {
-                indexOfDestination = Mathf.Clamp(Random.Range(-1, _spawnDestinations.Count), 0, _spawnDestinations.Count - 1);
+                indexOfDestination = Random.Range(0, _spawnDestinations.Count);
                 destination = _spawnDestinations[indexOfDestination].transform.position;
             }
             else
             {
-                if (!(indexOfDestination < _spawnDestinations.Count))
-                {
-                    indexOfDestination = 0;
-                }
-
+                indexOfDestination = (indexOfDestination + 1 + _spawnDestinations.Count) % _spawnDestinations.Count;
                 destination = _spawnDestinations[indexOfDestination].transform.position;
-                indexOfDestination++;
             }
         }
         else
