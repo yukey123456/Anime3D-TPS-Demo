@@ -30,6 +30,7 @@ TagManager:
   - CoverPoint
   - Interactable
   - AIAction
+  - UICamera
   layers:
   - Default
   - TransparentFX
@@ -50,7 +51,7 @@ TagManager:
   - BlockAIRayCast
   - Pushable
   - CoverPoint
-  - 
+  - Cut-In
   - 
   - 
   - 

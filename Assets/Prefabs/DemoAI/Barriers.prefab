@@ -202,10 +202,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7131368832193425950}
     m_Modifications:
+    - target: {fileID: 1535543942380533889, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3260999380828178987, guid: 959fc155bd68cf446be8a0a5bc8f6469,
         type: 3}
       propertyPath: m_Name
       value: BarrelGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260999380828178987, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308702433950942922, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4532487217725603907, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425902315858506120, guid: 959fc155bd68cf446be8a0a5bc8f6469,
         type: 3}
@@ -276,15 +296,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7131368832193425950}
     m_Modifications:
+    - target: {fileID: 1535543942380533889, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3260999380828178987, guid: 959fc155bd68cf446be8a0a5bc8f6469,
         type: 3}
       propertyPath: m_Name
       value: BarrelGroup (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3260999380828178987, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4308702433950942922, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4438749676530799130, guid: 959fc155bd68cf446be8a0a5bc8f6469,
         type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4532487217725603907, guid: 959fc155bd68cf446be8a0a5bc8f6469,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8425902315858506120, guid: 959fc155bd68cf446be8a0a5bc8f6469,
         type: 3}
