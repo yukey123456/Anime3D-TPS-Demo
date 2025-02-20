@@ -457,9 +457,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openCloseEvents: 0
   openCloseWindow: 0
-  selectedToolbar: 5
+  selectedToolbar: 3
   weaponCategory: Rifle
-  _shootFrequency: 0.15
+  _shootFrequency: 0.16
   isInfinityAmmo: 0
   _ammo: 500
   ignoreTags:
@@ -470,7 +470,7 @@ MonoBehaviour:
   projectile: {fileID: 1000010710861650, guid: 22773fb6a3ebd59429b49fd6e288058e, type: 3}
   muzzle: {fileID: 421838}
   projectilesPerShot: 1
-  dispersion: 0
+  dispersion: 1
   quadDispersion: 0
   velocity: 380
   damageByDistance: 1
@@ -551,7 +551,7 @@ MonoBehaviour:
   cameraStability: 0.5
   recoilRight: 0.05
   recoilLeft: -0.05
-  recoilUp: 0.35
+  recoilUp: 0.4
   reloadSource: {fileID: 0}
   reloadClip: {fileID: 8300000, guid: f4b0865c53d458d49a58b67d16d4b711, type: 3}
   finishReloadClip: {fileID: 0}
@@ -18352,7 +18352,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
   randomSeed: 0
