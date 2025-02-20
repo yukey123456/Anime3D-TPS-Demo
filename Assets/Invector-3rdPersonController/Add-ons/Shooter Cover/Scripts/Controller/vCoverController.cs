@@ -1726,6 +1726,7 @@ namespace Invector.vCover
             ControlCameraState();
             ControlIKState();
             ControlExitCoverByAngle();
+
         }
 
         /// <summary>
@@ -1956,6 +1957,11 @@ namespace Invector.vCover
                             }
                         }
                     }
+                }
+
+                if (changeSideBaseOnCorner && currentCoverPoint) //Nhan was here
+                {
+                    side = currentCoverPoint.corner == vCoverPoint.Corner.Left ? Side.left : Side.right;
                 }
             }
             else ///When Aiming

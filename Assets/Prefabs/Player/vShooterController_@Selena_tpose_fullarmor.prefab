@@ -22435,12 +22435,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    m_Quality: 3
-    m_FrameInfluence: 0.1
-    m_JitterScale: 1
-    m_MipBias: 0
-    m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &3194796959576011616
 GameObject:
   m_ObjectHideFlags: 0
@@ -33269,8 +33269,7 @@ MonoBehaviour:
     lastTimeTheButtonWasPressed: 0
     inButtomTimer: 0
   shooterManager: {fileID: 0}
-  _aimTarget: {fileID: 0}
-  _isAllieAiming: 0
+  _allieBehaviorTree: {fileID: 280773341499896350}
   _maxAllieAimingDistance: 420
 --- !u!114 &3447194792291671971
 MonoBehaviour:
@@ -34736,7 +34735,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true,"vCameraHandlermValue":0},{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true,"vAllieShooterInputmValue":1}]}'
+      JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedvCameraHandler","Name":"vCameraHandler","IsShared":true,"vCameraHandlermValue":0},{"Type":"BehaviorDesigner.Runtime.SharedvAllieShooterInput","Name":"vAllieShooterInput","IsShared":true,"vAllieShooterInputmValue":1},{"Type":"BehaviorDesigner.Runtime.SharedCollider","Name":"CurrentTarget","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"ShootPoint","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DetectRadius","IsShared":true,"SinglemValue":420}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 

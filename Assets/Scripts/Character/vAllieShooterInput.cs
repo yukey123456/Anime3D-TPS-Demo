@@ -1,8 +1,6 @@
+using BehaviorDesigner.Runtime;
 using Invector;
 using Invector.vCharacterController;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class vAllieShooterInput : vShooterMeleeInput
@@ -10,23 +8,26 @@ public class vAllieShooterInput : vShooterMeleeInput
     [vEditorToolbar("Allie Setting")]
 
     [SerializeField]
-    private Transform _aimTarget;
+    private BehaviorTree _allieBehaviorTree;
 
-    [SerializeField]
-    private bool _isAllieAiming;
+    [Header("Allie Aiming Setting")]
 
     [SerializeField]
     private float _maxAllieAimingDistance;
 
     private bool _isControlByPlayer;
-
-    public bool IsAllieAiming {  get { return _isAllieAiming; } set { _isAllieAiming = value; } }
+    private bool _isAllieAiming;
+    private bool _isAllieShooting;
+    private Vector3 _shootPosition;
 
     public override bool IsAiming
     {
         get
         {
-            return _isControlByPlayer ? base.IsAiming : _isAllieAiming;
+            if (_isControlByPlayer)
+                return base.IsAiming;
+
+            return _isAllieAiming && !isReloading;
         }
     }
 
@@ -37,9 +38,38 @@ public class vAllieShooterInput : vShooterMeleeInput
             if (_isControlByPlayer)
                 return base.AimPosition;
 
-            return _aimTarget ? _aimTarget.position : transform.forward;
+            return _shootPosition;
         }
     }
+
+    public bool IsControlledByPlayer => _isControlByPlayer;
+
+    #region ALLIE CONTROL
+
+    public virtual void AllieStartAiming()
+    {
+        _isAllieAiming = true;
+        isAimingByInput = true;
+    }
+
+    public virtual void AllieStopAiming()
+    {
+        _isAllieAiming = false;
+        isAimingByInput = false;
+    }
+
+    public virtual void AllieShoot(Vector3 targetPosition)
+    {
+        _shootPosition = targetPosition;
+        _isAllieShooting = true;
+    }
+
+    public virtual void AllieStopShooting()
+    {
+        _isAllieShooting= false;
+    }
+
+    #endregion
 
     //Run in FixedUpdate
     public override void InputHandle()
@@ -54,8 +84,6 @@ public class vAllieShooterInput : vShooterMeleeInput
             {
                 return;
             }
-
-            HandleAllieAiming();
 
             #region BasicInput
 
@@ -156,7 +184,7 @@ public class vAllieShooterInput : vShooterMeleeInput
             {
                 if (CurrentActiveWeapon || (shooterManager.CurrentWeapon && shooterManager.hipfireShot))
                 {
-                    HandleShotCount(shooterManager.CurrentWeapon, true);
+                    HandleShotCount(shooterManager.CurrentWeapon, _isAllieShooting);
                 }
             }
             else if (!IsAiming)
@@ -207,10 +235,7 @@ public class vAllieShooterInput : vShooterMeleeInput
             return;
         }
 
-        if (!_aimTarget)
-            return;
-
-        DesiredAimPosition = _aimTarget.position;
+        DesiredAimPosition = _shootPosition;
 
         Vector3 rayDirection = DesiredAimPosition - CurrentActiveWeapon.aimReference.position;
         ray.origin = CurrentActiveWeapon.aimReference.position;
@@ -257,35 +282,38 @@ public class vAllieShooterInput : vShooterMeleeInput
         AimPosition = desiredAimPoint;
     }
 
-    
-    protected void HandleAllieAiming()
+    public override bool IsAimInputState(InputState state)
     {
-        if (IsAllieAiming)
+        if (_isControlByPlayer)
         {
-            isAimingByInput = true;
+            return base.IsAimInputState(state);
         }
         else
         {
-
+            switch (state)
+            {
+                case InputState.Button:
+                    return _isAllieAiming;
+                case InputState.ButtonDown:
+                    return _isAllieAiming;
+                case InputState.ButtonUp:
+                    return false;
+            }
+            return false;
         }
-    }
-
-    public override bool IsAimInputState(InputState state)
-    {
-        switch (state)
-        {
-            case InputState.Button:
-                return IsAllieAiming || aimInput.GetButton();
-            case InputState.ButtonDown:
-                return IsAllieAiming || aimInput.GetButtonDown();
-            case InputState.ButtonUp:
-                return aimInput.GetButtonUp();
-        }
-        return false;
     }
 
     public void TogglePlayerControl(bool isOn)
     {
         _isControlByPlayer = isOn;
+
+        if (isOn)
+        {
+            _allieBehaviorTree.DisableBehavior();
+        }
+        else
+        {
+            _allieBehaviorTree.EnableBehavior();
+        }
     }
 }
